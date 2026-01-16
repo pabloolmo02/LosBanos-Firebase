@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link, useSearchParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Search, Filter, Lock, ShoppingCart } from 'lucide-react'; // Cambiado ShoppingBag a ShoppingCart
+import { Search, Filter, Lock, ShoppingCart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useAuth } from '@/contexts/AuthContext';
 import { getAllProducts, getProductsByCategory } from '@/services/productService'; 
@@ -20,9 +20,8 @@ const ProductsPage = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       setLoading(true);
-      let fetchedProducts = [];
-      
       try {
+        let fetchedProducts = [];
         if (selectedCategory === 'all' || selectedCategory === 'productos-certificados') {
           fetchedProducts = await getAllProducts();
         } else {
@@ -41,15 +40,12 @@ const ProductsPage = () => {
             p.reference.toLowerCase().includes(searchTerm.toLowerCase())
           );
         }
-
         setProducts(filtered);
       } catch (error) {
-        console.error("Error cargando productos:", error);
-      } finally {
-        setLoading(false);
+        console.error(error);
       }
+      setLoading(false);
     };
-
     fetchProducts();
   }, [selectedCategory, searchTerm]);
 
@@ -72,9 +68,7 @@ const ProductsPage = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Catálogo de Productos | Quimxel B2B</title>
-      </Helmet>
+      <Helmet><title>Catálogo | Quimxel B2B</title></Helmet>
 
       <div className="bg-slate-50 min-h-screen">
         <div className="text-white py-12 bg-cover bg-center" style={{ backgroundImage: "url('/images/products-hero.jpg')" }}>
@@ -88,7 +82,7 @@ const ProductsPage = () => {
                 <h2 className="font-semibold text-lg mb-4 flex items-center"><Filter className="h-5 w-5 mr-2" /> Filtros</h2>
                 <div className="space-y-2">
                   {categories.map((cat) => (
-                    <button key={cat.value} onClick={() => setSelectedCategory(cat.value)} className={`w-full text-left px-4 py-2 rounded-lg ${selectedCategory === cat.value ? 'bg-blue-100 text-blue-800 font-bold' : 'hover:bg-slate-100'}`}>
+                    <button key={cat.value} onClick={() => setSelectedCategory(cat.value)} className={`w-full text-left px-4 py-2 rounded-lg transition-colors ${selectedCategory === cat.value ? 'bg-blue-100 text-blue-800 font-bold' : 'hover:bg-slate-100'}`}>
                       {cat.label}
                     </button>
                   ))}
@@ -104,8 +98,8 @@ const ProductsPage = () => {
               ) : (
                 <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
                   {products.map((product) => (
-                    <motion.div key={product.id} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
-                      <Link to={`/producto/${product.id}`} className="block bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow overflow-hidden border group">
+                    <motion.div key={product.id} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+                      <Link to={`/producto/${product.id}`} className="block bg-white rounded-xl shadow-sm hover:shadow-lg transition-all border group overflow-hidden">
                         
                         <div className="aspect-square relative bg-cover bg-center p-2" style={{ backgroundImage: "url('/images/ProductBackground.PNG')" }}>
                             <img 
@@ -116,15 +110,13 @@ const ProductsPage = () => {
                         </div>
                         
                         <div className="p-4">
-                          <h3 className="font-semibold h-12">{product.name}</h3>
-                          {/* SIN PRECIO */}
+                          <h3 className="font-semibold h-12 line-clamp-2">{product.name}</h3>
                           {isApproved ? (
-                            <div className="flex items-center text-blue-700 font-medium text-sm">
-                                <ShoppingCart className="h-4 w-4 mr-2" />
-                                Disponible para pedido
+                            <div className="flex items-center text-blue-700 font-medium text-sm mt-2">
+                                <ShoppingCart className="h-4 w-4 mr-2" /> Disponible para pedido
                             </div>
                           ) : (
-                            <span className="text-sm text-slate-500"><Lock className="h-3 w-3 inline mr-1" /> Acceso B2B</span>
+                            <span className="text-sm text-slate-500 mt-2 block"><Lock className="h-3 w-3 inline mr-1" /> Acceso B2B</span>
                           )}
                         </div>
                       </Link>

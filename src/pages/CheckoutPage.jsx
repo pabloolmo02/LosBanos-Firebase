@@ -9,8 +9,8 @@ import { useAuth } from '@/contexts/AuthContext';
 import { useToast } from '@/components/ui/use-toast';
 import { getCart, clearCart } from '@/lib/cart';
 import { createOrder } from '@/services/orderService';
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Label } from "@/components/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group.jsx"; // Extensión explícita
+import { Label } from "@/components/ui/label.jsx";
 import { Input } from "@/components/ui/input.jsx";
 import emailjs from '@emailjs/browser';
 
