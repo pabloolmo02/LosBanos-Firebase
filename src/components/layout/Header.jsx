@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Menu, X, ShoppingCart, User, Search, FileText } from 'lucide-react';
+import { Menu, X, ShoppingCart, User, Search, FileText, Shield } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
 import { Button } from '@/components/ui/button';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -16,16 +16,14 @@ const Header = () => {
     navigate('/');
   };
 
+  const isAdmin = user?.role === 'admin';
+
   return (
     <header className="shadow-md sticky top-0 z-50 bg-white border-b border-brand-base/30">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center space-x-3">
             {<img src="/images/logo-letra.png" alt="Quimxel Logo" className="h-12 w-auto" />}
-            {/* <div className="flex flex-col font-logo">
-              <span className="font-bold text-xl text-white">Los Baños</span>
-              <span className="text-xs text-white">comercial</span>
-            </div> */}
           </Link>
 
           <nav className="hidden xl:flex items-center space-x-8">
@@ -52,6 +50,15 @@ const Header = () => {
             
             {isAuthenticated ? (
               <>
+                {isAdmin && (
+                    <Button variant="ghost" size="sm" asChild className="text-purple-700 hover:text-purple-900 hover:bg-purple-100 mr-1">
+                        <Link to="/admin-users" className="flex items-center">
+                            <Shield className="h-4 w-4 mr-1" />
+                            Admin
+                        </Link>
+                    </Button>
+                )}
+
                 <Button variant="ghost" size="icon" asChild className="text-brand-dark hover:text-brand-blue hover:bg-brand-base/20">
                   <Link to="/carrito">
                     <ShoppingCart className="h-5 w-5" />
@@ -105,9 +112,11 @@ const Header = () => {
               <Link to="/empresa" className="text-brand-dark hover:text-brand-blue font-semibold py-2 px-3 rounded-lg hover:bg-brand-base/20 transition-all" onClick={() => setMobileMenuOpen(false)}>
                 Empresa
               </Link>
-              <Link to="/documentacion" className="text-brand-dark hover:text-brand-blue font-semibold py-2 px-3 rounded-lg hover:bg-brand-base/20 transition-all" onClick={() => setMobileMenuOpen(false)}>
-                Documentación
-              </Link>
+              {isAdmin && (
+                  <Link to="/admin-users" className="text-purple-700 hover:text-purple-900 font-semibold py-2 px-3 rounded-lg hover:bg-purple-100 transition-all" onClick={() => setMobileMenuOpen(false)}>
+                    Administración Usuarios
+                  </Link>
+              )}
               {isAuthenticated ? (
                 <>
                   <Link to="/carrito" className="text-brand-dark hover:text-brand-blue font-semibold py-2 px-3 rounded-lg hover:bg-brand-base/20 transition-all" onClick={() => setMobileMenuOpen(false)}>

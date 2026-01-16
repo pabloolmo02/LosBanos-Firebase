@@ -11,32 +11,38 @@ import { useToast } from '@/components/ui/use-toast';
 const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [loading, setLoading] = useState(false);
   const { login } = useAuth();
   const navigate = useNavigate();
   const { toast } = useToast();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     
-    // This is a placeholder for actual authentication
-    // In a real app, you would validate credentials against a backend/service
-    const mockUser = {
-      id: '123',
-      email,
-      name: 'Usuario B2B',
-      status: 'approved', // 'approved' for demo, could be 'pending'
-      company: 'Mi Empresa S.L.',
-      cif: 'B12345678',
-    };
-    
-    login(mockUser);
-    
-    toast({
-      title: 'Inicio de sesión exitoso',
-      description: 'Bienvenido de nuevo.',
-    });
-    
-    navigate('/dashboard');
+    try {
+        await login(email, password);
+        
+        toast({
+            title: 'Inicio de sesión exitoso',
+            description: 'Bienvenido de nuevo.',
+        });
+        
+        navigate('/dashboard');
+    } catch (error) {
+        console.error(error);
+        let errorMsg = "Credenciales incorrectas.";
+        if (error.code === 'auth/invalid-credential') errorMsg = "Email o contraseña incorrectos.";
+        if (error.code === 'auth/too-many-requests') errorMsg = "Demasiados intentos fallidos. Inténtelo más tarde.";
+
+        toast({
+            title: 'Error de inicio de sesión',
+            description: errorMsg,
+            variant: "destructive"
+        });
+    } finally {
+        setLoading(false);
+    }
   };
 
   return (
@@ -97,8 +103,8 @@ const LoginPage = () => {
                   />
                 </div>
               </div>
-              <Button size="lg" type="submit" className="w-full">
-                Iniciar Sesión
+              <Button size="lg" type="submit" className="w-full" disabled={loading}>
+                {loading ? 'Iniciando sesión...' : 'Iniciar Sesión'}
               </Button>
             </form>
 
