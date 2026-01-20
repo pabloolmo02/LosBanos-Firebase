@@ -1,18 +1,30 @@
 
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Search, FileText, Download, Shield, AlertCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+  DialogFooter,
+} from "@/components/ui/dialog.jsx";
+import { useAuth } from '@/contexts/AuthContext';
 import { useToast } from '@/components/ui/use-toast';
-import { getAllProducts } from '@/services/productService'; // Usar servicio Firebase
+import { getAllProducts } from '@/services/productService';
 
 const DocumentationPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const { isApproved } = useAuth();
   const { toast } = useToast();
+  const [showAuthPopup, setShowAuthPopup] = useState(false);
 
   useEffect(() => {
     const loadData = async () => {
@@ -35,6 +47,14 @@ const DocumentationPage = () => {
         ));
     }
   }, [searchTerm, products]);
+
+  const handleDownloadClick = (url) => {
+    if (isApproved) {
+      window.open(url, '_blank');
+    } else {
+      setShowAuthPopup(true);
+    }
+  };
 
   const handleUnavailable = (docType) => {
       toast({
@@ -101,10 +121,8 @@ const DocumentationPage = () => {
                                 <span className="text-sm font-medium">Ficha Técnica</span>
                             </div>
                             {product.technicalSheetUrl ? (
-                                <Button variant="ghost" size="sm" asChild className="h-8 w-8 p-0">
-                                    <a href={product.technicalSheetUrl} target="_blank" rel="noopener noreferrer">
-                                        <Download className="h-4 w-4" />
-                                    </a>
+                                <Button variant="ghost" size="sm" onClick={() => handleDownloadClick(product.technicalSheetUrl)} className="h-8 w-8 p-0">
+                                    <Download className="h-4 w-4" />
                                 </Button>
                             ) : (
                                 <Button variant="ghost" size="sm" className="h-8 w-8 p-0" onClick={() => handleUnavailable("Ficha Técnica")}>
@@ -120,10 +138,8 @@ const DocumentationPage = () => {
                                 <span className="text-sm font-medium">Ficha Seguridad</span>
                             </div>
                             {product.safetySheetUrl ? (
-                                <Button variant="ghost" size="sm" asChild className="h-8 w-8 p-0">
-                                    <a href={product.safetySheetUrl} target="_blank" rel="noopener noreferrer">
-                                        <Download className="h-4 w-4" />
-                                    </a>
+                                <Button variant="ghost" size="sm" onClick={() => handleDownloadClick(product.safetySheetUrl)} className="h-8 w-8 p-0">
+                                    <Download className="h-4 w-4" />
                                 </Button>
                             ) : (
                                 <Button variant="ghost" size="sm" className="h-8 w-8 p-0" onClick={() => handleUnavailable("Ficha Seguridad")}>
@@ -138,6 +154,20 @@ const DocumentationPage = () => {
           )}
         </div>
       </div>
+
+      <Dialog open={showAuthPopup} onOpenChange={setShowAuthPopup}>
+        <DialogContent className="sm:max-w-[425px]">
+          <DialogHeader>
+            <DialogTitle>Registro Requerido</DialogTitle>
+            <DialogDescription>
+              Para descargar la documentación, necesitas estar registrado y tener una cuenta aprobada.
+            </DialogDescription>
+          </DialogHeader>
+          <DialogFooter>
+            <Button asChild><Link to="/registro">Registrarse Ahora</Link></Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </>
   );
 };

@@ -1,4 +1,4 @@
-import { POPUP_STYLES } from './plugins/visual-editor/visual-editor-config.js';
+import { EDIT_MODE_STYLES } from './visual-editor-config.js';
 
 const PLUGIN_APPLY_EDIT_API_URL = '/api/apply-edit';
 
@@ -28,7 +28,7 @@ function injectPopupStyles() {
 
   const styleElement = document.createElement('style');
   styleElement.id = 'inline-editor-styles';
-  styleElement.textContent = POPUP_STYLES;
+  styleElement.textContent = EDIT_MODE_STYLES;
   document.head.appendChild(styleElement);
   areStylesInjected = true;
 }
