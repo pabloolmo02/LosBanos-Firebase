@@ -3,7 +3,7 @@ node_modules/
 .pnpm-store/
 
 # Build outputs
-dist/
+#dist/
 dist-ssr/
 *.local
 
@@ -47,3 +47,4 @@ lerna-debug.log*
 
 # OS
 Thumbs.db
+tools/losbanosdata-1f79f-firebase-adminsdk-fbsvc-f653f6cda0.json
