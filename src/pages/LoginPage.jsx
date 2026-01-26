@@ -48,7 +48,7 @@ const LoginPage = () => {
   return (
     <>
       <Helmet>
-        <title>Iniciar Sesión - Acceso B2B | QUÍMICAS QUIMXEL</title>
+        <title>Iniciar Sesión - Acceso B2B | Los Baños</title>
         <meta name="description" content="Acceda a su cuenta profesional B2B para ver precios personalizados, realizar pedidos y gestionar su cuenta en la plataforma de QUÍMICAS QUIMXEL." />
       </Helmet>
 

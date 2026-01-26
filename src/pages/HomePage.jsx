@@ -45,11 +45,11 @@ const HomePage = () => {
   return (
     <>
       <Helmet>
-        <title>Soluciones de Higiene y Desinfección Certificada Quimxel en Sevilla y Córdoba | Distribución B2B</title>
-        <meta name="description" content="Distribución exclusiva de productos químicos profesionales QUIMXEL certificados ISO 9001/14001 y Ecolabel para HORECA, Lavandería y Limpieza Industrial en Sevilla y Córdoba. Entrega en 48h." />
+        <title>Los Baños</title>
+        <meta name="description" content="Distribución exclusiva de productos químicos profesionales certificados ISO 9001/14001 y Ecolabel para HORECA, Lavandería y Limpieza Industrial en Sevilla y Córdoba. Entrega en 48h." />
       </Helmet>
 
-      <section className="relative text-white py-20 overflow-hidden" style={{
+      <section className="relative text-white py-20 lg:py-0 overflow-hidden lg:min-h-screen flex items-center" style={{
         backgroundImage: "linear-gradient(rgba(27, 24, 71, 0.75), rgba(28, 37, 107, 0.75)), url('/images/products-hero.jpg')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -65,8 +65,8 @@ const HomePage = () => {
             >
               <div className="flex items-center space-x-3 mb-6">
                 <div className="flex space-x-2">
-                  <div className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-semibold">ISO 9001</div>
-                  <div className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-semibold">ISO 14001</div>
+                  <div className="px-3 py-1 bg-blue-500/30 backdrop-blur-sm rounded-full text-xs font-semibold">ISO 9001</div>
+                  <div className="px-3 py-1 bg-blue-500/30 backdrop-blur-sm rounded-full text-xs font-semibold">ISO 14001</div>
                   <div className="px-3 py-1 bg-green-500/30 backdrop-blur-sm rounded-full text-xs font-semibold">ECOLABEL</div>
                 </div>
               </div>
@@ -112,7 +112,7 @@ const HomePage = () => {
               <img 
                 className="rounded-2xl shadow-2xl w-full h-auto" 
                 alt="Productos químicos profesionales Quimxel para HORECA y limpieza industrial"
-               src="https://images.unsplash.com/photo-1622030360273-a8d1377be08b" />
+               src="/images/CalidadFotoCompany.jpg" />
             </motion.div>
           </div>
         </div>
@@ -217,7 +217,7 @@ const HomePage = () => {
                 </li>
               </ul>
               
-              <Button size="lg" asChild>
+              <Button size="lg" asChild className="bg-green-600 hover:bg-green-700 text-white">
                 <Link to="/productos?cat=productos-certificados">
                   Descubrir Línea Ecolabel
                   <ChevronRight className="ml-2 h-5 w-5" />
