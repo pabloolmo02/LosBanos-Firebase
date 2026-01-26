@@ -1,0 +1,12 @@
+## Pages
+- [| Quimxel B2B](/productdetail): No description available
+- [Catálogo | Quimxel B2B](/products): No description available
+- [Centro de Documentación Técnica y Legal | QUÍMICAS QUIMXEL](/documentation): No description available
+- [Confirmar Solicitud | Quimxel](/checkout): No description available
+- [Gestión de Usuarios | Admin Quimxel](/adminusers): No description available
+- [Iniciar Sesión - Acceso B2B | QUÍMICAS QUIMXEL](/login): Acceda a su cuenta profesional B2B para ver precios personalizados, realizar pedidos y gestionar su cuenta en la plataforma de QUÍMICAS QUIMXEL.
+- [Panel de Cliente | Quimxel](/dashboard): No description available
+- [Sobre Nosotros - QUÍMICAS QUIMXEL | 35+ Años de Experiencia](/company): QUÍMICAS QUIMXEL, S.L. - Más de 35 años fabricando productos químicos profesionales certificados ISO 9001/14001. Distribución exclusiva en Sevilla y Córdoba.
+- [Solicitar Acceso B2B | QUÍMICAS QUIMXEL](/register): Regístrese para obtener una cuenta profesional B2B. Acceda a precios exclusivos, soporte técnico y pedidos rápidos en QUÍMICAS QUIMXEL.
+- [Solicitud de Pedido | Quimxel](/cart): No description available
+- [Soluciones de Higiene y Desinfección Certificada Quimxel en Sevilla y Córdoba | Distribución B2B](/home): Distribución exclusiva de productos químicos profesionales QUIMXEL certificados ISO 9001/14001 y Ecolabel para HORECA, Lavandería y Limpieza Industrial en Sevilla y Córdoba. Entrega en 48h.
