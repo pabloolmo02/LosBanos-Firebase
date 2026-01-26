@@ -124,7 +124,7 @@ const ProductsPage = () => {
 
   return (
     <>
-      <Helmet><title>Catálogo | Quimxel B2B</title></Helmet>
+      <Helmet><title>Catálogo | Los Baños</title></Helmet>
 
       <div className="bg-slate-50 min-h-screen">
         <div className="text-white py-12 bg-cover bg-center relative" style={{ backgroundImage: "url('/images/products-hero.jpg')" }}>

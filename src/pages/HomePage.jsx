@@ -45,11 +45,11 @@ const HomePage = () => {
   return (
     <>
       <Helmet>
-        <title>Soluciones de Higiene y Desinfección Certificada Quimxel en Sevilla y Córdoba | Distribución B2B</title>
-        <meta name="description" content="Distribución exclusiva de productos químicos profesionales QUIMXEL certificados ISO 9001/14001 y Ecolabel para HORECA, Lavandería y Limpieza Industrial en Sevilla y Córdoba. Entrega en 48h." />
+        <title>Los Baños</title>
+        <meta name="description" content="Distribución exclusiva de productos químicos profesionales certificados ISO 9001/14001 y Ecolabel para HORECA, Lavandería y Limpieza Industrial en Sevilla y Córdoba. Entrega en 48h." />
       </Helmet>
 
-      <section className="relative text-white py-20 overflow-hidden" style={{
+      <section className="relative text-white py-20 lg:py-0 overflow-hidden lg:min-h-screen flex items-center" style={{
         backgroundImage: "linear-gradient(rgba(27, 24, 71, 0.75), rgba(28, 37, 107, 0.75)), url('/images/products-hero.jpg')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -131,7 +131,7 @@ const HomePage = () => {
                 className="text-center"
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
-                  <feature.icon className="h-8 w-8 text-blue-600" />
+                  <feature.icon className="h-8 w-8" style={{ color: '#1c256b' }} />
                 </div>
                 <h3 className="text-lg font-semibold text-slate-900 mb-2">{feature.title}</h3>
                 <p className="text-slate-600 text-sm">{feature.description}</p>

@@ -2,58 +2,67 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
-import { Award, Shield, Leaf, Users, TrendingUp, MapPin } from 'lucide-react';
+import { Award, Shield, Leaf, Users, TrendingUp, MapPin, PackageCheck, Lightbulb } from 'lucide-react'; // Añadí nuevos iconos
 
 const CompanyPage = () => {
   return (
     <>
       <Helmet>
-        <title>Sobre Nosotros - QUÍMICAS QUIMXEL | 35+ Años de Experiencia</title>
-        <meta name="description" content="QUÍMICAS QUIMXEL, S.L. - Más de 35 años fabricando productos químicos profesionales certificados ISO 9001/14001. Distribución exclusiva en Sevilla y Córdoba." />
+        <title>Sobre Nosotros - Los Baños | Expertos en Higiene Profesional</title>
+        <meta name="description" content="Los Baños - Más de 35 años asesorando en higiene profesional. Distribuidores oficiales de productos certificados y sistemas concentrados de alta eficiencia." />
       </Helmet>
 
       <div className="bg-slate-50">
-        <div className="text-white py-20" style={{
-          backgroundImage: "linear-gradient(rgba(27, 24, 71, 0.75), rgba(28, 37, 107, 0.75)), url('/images/products-hero.jpg')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
+        {/* Hero Section */}
+        <div className="text-white py-20 relative overflow-hidden" style={{
+          background: 'linear-gradient(135deg, #1b1847 0%, #15277a 100%)', // Gradiente corporativo limpio si no carga imagen
         }}>
-          <div className="container mx-auto px-4">
+           {/* Imagen de fondo opcional con overlay */}
+           <div className="absolute inset-0 z-0 opacity-20" style={{
+                backgroundImage: "url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80')",
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+            }}></div>
+
+          <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="max-w-3xl"
             >
-              <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-                35+ Años de Excelencia en Productos Químicos Profesionales
+              <h1 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                Más que Distribuidores,<br/>
+                <span className="text-blue-300">Consultores de Higiene.</span>
               </h1>
-              <p className="text-xl text-blue-100">
-                QUÍMICAS QUIMXEL, S.L. - Calidad certificada y compromiso con la sostenibilidad
+              <p className="text-xl text-blue-100 max-w-2xl leading-relaxed">
+                35 años ayudando a negocios a optimizar sus procesos de limpieza. 
+                Suministramos soluciones certificadas y sistemas concentrados que transforman la higiene en rentabilidad.
               </p>
             </motion.div>
           </div>
         </div>
 
         <div className="container mx-auto px-4 py-16">
-          <div className="grid lg:grid-cols-2 gap-12 mb-16">
+          
+          {/* Sección Historia / Enfoque */}
+          <div className="grid lg:grid-cols-2 gap-12 mb-20 items-center">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl font-bold mb-6" style={{ color: '#1b1847' }}>Nuestra Historia</h2>
+              <h2 className="text-3xl font-bold mb-6" style={{ color: '#1b1847' }}>Experiencia que Genera Confianza</h2>
               <div className="prose prose-lg text-slate-700">
                 <p className="mb-4">
-                  Con más de 35 años de trayectoria, QUÍMICAS QUIMXEL, S.L. se ha consolidado como un referente en la fabricación de productos químicos profesionales de alta calidad para los sectores de HORECA, Lavandería Industrial, Limpieza Sanitaria y Automoción.
+                  En <strong>Los Baños</strong>, no solo entregamos productos; entregamos tranquilidad. Como distribuidores oficiales, hemos seleccionado un catálogo de élite respaldado por fabricantes líderes como Quimxel, pero nuestro verdadero valor reside en el <strong>"saber hacer"</strong>.
                 </p>
                 <p className="mb-4">
-                  Nuestra experiencia y compromiso con la innovación nos han permitido desarrollar soluciones químicas que cumplen con los más altos estándares de calidad, seguridad y sostenibilidad ambiental.
+                  Analizamos las necesidades específicas de tu hotel, industria o lavandería para diseñar planes de higiene a medida. No se trata de limpiar más, sino de limpiar mejor: reduciendo costes, minimizando riesgos y garantizando el cumplimiento normativo.
                 </p>
                 <p>
-                  Como distribuidores exclusivos en Sevilla y Córdoba, garantizamos no solo productos de máxima calidad, sino también un servicio de proximidad, soporte técnico especializado y logística eficiente con entrega garantizada en 48 horas.
+                  Nuestro compromiso es claro: ofrecerte la tecnología química más avanzada del mercado con el trato cercano y resolutivo que tu negocio necesita día a día.
                 </p>
               </div>
             </motion.div>
@@ -63,27 +72,38 @@ const CompanyPage = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+              className="relative"
             >
+                {/* Imagen sugerida: Almacén moderno o reunión de equipo */}
               <img 
-                className="rounded-2xl shadow-xl w-full h-auto" 
-                alt="Instalaciones de fabricación de QUÍMICAS QUIMXEL con certificaciones de calidad"
-               src="https://images.unsplash.com/photo-1698580868042-8a1bfab0c4c0" />
+                className="rounded-2xl shadow-xl w-full h-auto object-cover" 
+                alt="Equipo de Los Baños asesorando cliente"
+                src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80" 
+                style={{ maxHeight: '400px' }}
+              />
+              <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg max-w-xs hidden md:block">
+                  <div className="flex items-center gap-3">
+                      <Lightbulb className="text-yellow-500 h-8 w-8" />
+                      <p className="text-sm font-semibold text-slate-800">Auditorías técnicas y formación de personal incluidas.</p>
+                  </div>
+              </div>
             </motion.div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
+          {/* Stats Grid */}
+          <div className="grid md:grid-cols-3 gap-8 mb-20">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className="bg-white rounded-xl shadow-lg p-8 text-center"
+              className="bg-white rounded-xl shadow-lg p-8 text-center border-b-4 border-blue-900"
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-4" style={{ backgroundColor: '#e3f2fd' }}>
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-50 rounded-full mb-4">
                 <TrendingUp className="h-8 w-8" style={{ color: '#15277a' }} />
               </div>
-              <h3 className="text-4xl font-bold mb-2" style={{ color: '#15277a' }}>35+</h3>
-              <p className="text-slate-600">Años de Experiencia</p>
+              <h3 className="text-4xl font-bold mb-2" style={{ color: '#15277a' }}>+35</h3>
+              <p className="text-slate-600 font-medium">Años de Trayectoria</p>
             </motion.div>
 
             <motion.div
@@ -91,13 +111,13 @@ const CompanyPage = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
-              className="bg-white rounded-xl shadow-lg p-8 text-center"
+              className="bg-white rounded-xl shadow-lg p-8 text-center border-b-4 border-green-600"
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
-                <Users className="h-8 w-8 text-green-600" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-green-50 rounded-full mb-4">
+                <PackageCheck className="h-8 w-8 text-green-600" />
               </div>
-              <h3 className="text-4xl font-bold text-green-600 mb-2">500+</h3>
-              <p className="text-slate-600">Clientes B2B Activos</p>
+              <h3 className="text-4xl font-bold text-green-600 mb-2">-80%</h3>
+              <p className="text-slate-600 font-medium">Reducción Logística (Concentrados)</p>
             </motion.div>
 
             <motion.div
@@ -105,82 +125,108 @@ const CompanyPage = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
-              className="bg-white rounded-xl shadow-lg p-8 text-center"
+              className="bg-white rounded-xl shadow-lg p-8 text-center border-b-4 border-purple-600"
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">
-                <MapPin className="h-8 w-8 text-purple-600" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-50 rounded-full mb-4">
+                <Users className="h-8 w-8 text-purple-600" />
               </div>
-              <h3 className="text-4xl font-bold text-purple-600 mb-2">48h</h3>
-              <p className="text-slate-600">Entrega Garantizada</p>
+              <h3 className="text-4xl font-bold text-purple-600 mb-2">100%</h3>
+              <p className="text-slate-600 font-medium">Satisfacción Garantizada</p>
             </motion.div>
           </div>
 
-          <div id="calidad" className="bg-white rounded-2xl shadow-lg p-8 lg:p-12 mb-16">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Sección Certificaciones y Calidad */}
+          <div id="calidad" className="bg-white rounded-2xl shadow-lg overflow-hidden mb-16">
+            <div className="grid lg:grid-cols-2">
+                <div className="p-8 lg:p-12 flex flex-col justify-center">
+                    <div className="flex items-center space-x-3 mb-6">
+                        <Shield className="h-8 w-8" style={{ color: '#15277a' }} />
+                        <h2 className="text-3xl font-bold" style={{ color: '#1b1847' }}>Garantía Certificada</h2>
+                    </div>
+                    <div className="prose text-slate-700">
+                        <p className="mb-6">
+                            La seguridad no es negociable. Trabajamos exclusivamente con productos que cumplen las normativas más exigentes del sector. Ya sea para industria alimentaria, sanitaria o colectividades, nuestros productos cuentan con los avales necesarios para que operes con total tranquilidad.
+                        </p>
+                        <div className="grid grid-cols-2 gap-4">
+                            <div className="bg-slate-50 p-4 rounded-lg border border-slate-100">
+                                <p className="font-bold text-slate-800">ISO 9001 / 14001</p>
+                                <p className="text-sm text-slate-500">Estándares de calidad y gestión ambiental.</p>
+                            </div>
+                            <div className="bg-slate-50 p-4 rounded-lg border border-slate-100">
+                                <p className="font-bold text-slate-800">Registro HA</p>
+                                <p className="text-sm text-slate-500">Aptos para Industria Alimentaria (HACCP).</p>
+                            </div>
+                            <div className="bg-slate-50 p-4 rounded-lg border border-slate-100">
+                                <p className="font-bold text-slate-800">Reg. AEMPS</p>
+                                <p className="text-sm text-slate-500">Biocidas y desinfectantes sanitarios registrados.</p>
+                            </div>
+                            <div className="bg-slate-50 p-4 rounded-lg border border-slate-100">
+                                <p className="font-bold text-slate-800">Ecolabel</p>
+                                <p className="text-sm text-slate-500">Etiqueta ecológica europea.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="bg-slate-100 relative min-h-[300px] lg:min-h-full">
+                    <img 
+                        src="/images/CalidadFotoCompany.jpg" 
+                        alt="Laboratorio y control de calidad"
+                        className="absolute inset-0 w-full h-full object-cover"
+                    />
+                     <div className="absolute inset-0 bg-blue-900/10"></div>
+                </div>
+            </div>
+          </div>
+
+          {/* Sección Sostenibilidad y Concentrados */}
+          <div id="medioambiente" className="rounded-2xl shadow-lg p-8 lg:p-12 text-white relative overflow-hidden">
+             {/* Fondo gradiente verde */}
+            <div className="absolute inset-0 z-0" style={{
+                background: 'linear-gradient(135deg, #059669 0%, #047857 100%)'
+            }}></div>
+            
+            <div className="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="flex items-center space-x-3 mb-6">
-                  <Shield className="h-8 w-8" style={{ color: '#15277a' }} />
-                  <h2 className="text-3xl font-bold" style={{ color: '#1b1847' }}>Política de Calidad</h2>
+                  <Leaf className="h-8 w-8 text-green-200" />
+                  <h2 className="text-3xl font-bold">Revolución Sostenible</h2>
                 </div>
-                <div className="prose text-slate-700">
+                <div className="prose prose-lg text-green-50">
                   <p className="mb-4">
-                    En QUÍMICAS QUIMXEL, la calidad no es solo un objetivo, es nuestro compromiso fundamental. Nuestra certificación ISO 9001 garantiza que todos nuestros procesos de fabricación, control y distribución cumplen con los estándares internacionales más exigentes.
+                    La sostenibilidad también es rentabilidad. Apostamos fuertemente por nuestra <strong>gama de ultraconcentrados</strong>, diseñados para minimizar el impacto ambiental y maximizar tu eficiencia operativa.
                   </p>
-                  <ul className="space-y-2">
-                    <li>Control de calidad riguroso en cada etapa de producción</li>
-                    <li>Trazabilidad completa de materias primas y productos finales</li>
-                    <li>Laboratorio propio con equipamiento de última generación</li>
-                    <li>Formación continua de nuestro equipo técnico</li>
-                    <li>Auditorías internas y externas periódicas</li>
+                  <ul className="space-y-3 list-none pl-0">
+                    <li className="flex items-start gap-3">
+                        <span className="bg-green-400/20 p-1 rounded mt-1"><PackageCheck className="h-4 w-4" /></span>
+                        <span><strong>80% menos de logística:</strong> Transporta producto activo, no agua. Reduce costes de almacenamiento y transporte.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                        <span className="bg-green-400/20 p-1 rounded mt-1"><Leaf className="h-4 w-4" /></span>
+                        <span><strong>100% Reciclable:</strong> Envases diseñados para entrar en la economía circular y reducir el plástico virgen.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                         <span className="bg-green-400/20 p-1 rounded mt-1"><Shield className="h-4 w-4" /></span>
+                        <span><strong>Control de costes exacto:</strong> Sistemas de dosificación que evitan mermas y garantizan el coste por uso.</span>
+                    </li>
                   </ul>
                 </div>
               </div>
-              <div className="flex justify-center">
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="rounded-xl p-6 text-center" style={{ backgroundColor: '#e3f2fd' }}>
-                    <Award className="h-12 w-12 mx-auto mb-3" style={{ color: '#15277a' }} />
-                    <p className="font-bold" style={{ color: '#1b1847' }}>ISO 9001</p>
-                    <p className="text-sm text-slate-600">Gestión de Calidad</p>
-                  </div>
-                  <div className="bg-green-50 rounded-xl p-6 text-center">
-                    <Award className="h-12 w-12 text-green-600 mx-auto mb-3" />
-                    <p className="font-bold" style={{ color: '#1b1847' }}>ISO 14001</p>
-                    <p className="text-sm text-slate-600">Gestión Ambiental</p>
-                  </div>
+              <div className="flex justify-center lg:justify-end">
+                 {/* Tarjeta flotante visual */}
+                <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 max-w-sm">
+                    <div className="text-center mb-4">
+                        <Leaf className="h-16 w-16 mx-auto text-green-300 mb-2" />
+                        <h4 className="text-xl font-bold text-white">Ecolabel UE</h4>
+                        <p className="text-sm text-green-100">Excelencia ambiental certificada</p>
+                    </div>
+                    <p className="text-sm text-center text-green-50 italic">
+                        "Nuestros clientes reducen su huella de carbono mientras mejoran sus estándares de limpieza."
+                    </p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div id="medioambiente" className="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl shadow-lg p-8 lg:p-12">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <img 
-                  className="rounded-xl shadow-lg w-full h-auto" 
-                  alt="Productos ecológicos certificados Ecolabel de QUÍMICAS QUIMXEL"
-                 src="https://images.unsplash.com/photo-1679590988942-82d1575a83ae" />
-              </div>
-              <div>
-                <div className="flex items-center space-x-3 mb-6">
-                  <Leaf className="h-8 w-8 text-green-600" />
-                  <h2 className="text-3xl font-bold" style={{ color: '#1b1847' }}>Compromiso Ambiental</h2>
-                </div>
-                <div className="prose text-slate-700">
-                  <p className="mb-4">
-                    Nuestra certificación ISO 14001 y la línea de productos Ecolabel demuestran nuestro compromiso firme con la sostenibilidad y la protección del medio ambiente.
-                  </p>
-                  <ul className="space-y-2">
-                    <li>Desarrollo de productos biodegradables y de bajo impacto ambiental</li>
-                    <li>Reducción de emisiones en procesos de fabricación</li>
-                    <li>Gestión responsable de residuos y efluentes</li>
-                    <li>Envases reciclables y optimización de packaging</li>
-                    <li>Productos ultraconcentrados que reducen huella de carbono en transporte</li>
-                    <li>Certificación Ecolabel en productos clave</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </>

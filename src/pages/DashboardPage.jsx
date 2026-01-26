@@ -40,7 +40,7 @@ const DashboardPage = () => {
 
   return (
     <>
-      <Helmet><title>Panel de Cliente | Quimxel</title></Helmet>
+      <Helmet><title>Panel de Cliente | Los Baños</title></Helmet>
       
       <div className="container mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold text-slate-900 mb-4">Panel de Cliente</h1>
