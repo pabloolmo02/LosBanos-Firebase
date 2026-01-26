@@ -65,8 +65,8 @@ const HomePage = () => {
             >
               <div className="flex items-center space-x-3 mb-6">
                 <div className="flex space-x-2">
-                  <div className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-semibold">ISO 9001</div>
-                  <div className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-semibold">ISO 14001</div>
+                  <div className="px-3 py-1 bg-blue-500/30 backdrop-blur-sm rounded-full text-xs font-semibold">ISO 9001</div>
+                  <div className="px-3 py-1 bg-blue-500/30 backdrop-blur-sm rounded-full text-xs font-semibold">ISO 14001</div>
                   <div className="px-3 py-1 bg-green-500/30 backdrop-blur-sm rounded-full text-xs font-semibold">ECOLABEL</div>
                 </div>
               </div>
@@ -112,7 +112,7 @@ const HomePage = () => {
               <img 
                 className="rounded-2xl shadow-2xl w-full h-auto" 
                 alt="Productos químicos profesionales Quimxel para HORECA y limpieza industrial"
-               src="https://images.unsplash.com/photo-1622030360273-a8d1377be08b" />
+               src="/images/CalidadFotoCompany.jpg" />
             </motion.div>
           </div>
         </div>
@@ -131,7 +131,7 @@ const HomePage = () => {
                 className="text-center"
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
-                  <feature.icon className="h-8 w-8" style={{ color: '#1c256b' }} />
+                  <feature.icon className="h-8 w-8 text-blue-600" />
                 </div>
                 <h3 className="text-lg font-semibold text-slate-900 mb-2">{feature.title}</h3>
                 <p className="text-slate-600 text-sm">{feature.description}</p>
@@ -217,7 +217,7 @@ const HomePage = () => {
                 </li>
               </ul>
               
-              <Button size="lg" asChild>
+              <Button size="lg" asChild className="bg-green-600 hover:bg-green-700 text-white">
                 <Link to="/productos?cat=productos-certificados">
                   Descubrir Línea Ecolabel
                   <ChevronRight className="ml-2 h-5 w-5" />
