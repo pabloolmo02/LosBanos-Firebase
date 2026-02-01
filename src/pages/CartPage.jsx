@@ -31,7 +31,7 @@ const CartPage = () => {
 
   return (
     <>
-      <Helmet><title>Solicitud de Pedido | Quimxel</title></Helmet>
+      <Helmet><title>Solicitud de Pedido | Los Baños</title></Helmet>
 
       <div className="container mx-auto px-4 py-12">
         <div className="flex items-center space-x-3 mb-8">

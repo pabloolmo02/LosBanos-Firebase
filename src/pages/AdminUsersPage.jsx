@@ -71,7 +71,7 @@ const AdminUsersPage = () => {
   return (
     <div className="container mx-auto px-4 py-12">
       <Helmet>
-        <title>Gestión de Usuarios | Admin Quimxel</title>
+        <title>Gestión de Usuarios | Admin Los Baños</title>
       </Helmet>
 
       <div className="flex justify-between items-center mb-8">

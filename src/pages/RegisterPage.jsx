@@ -116,7 +116,7 @@ const RegisterPage = () => {
   return (
     <>
       <Helmet>
-        <title>Solicitar Acceso B2B | QUÍMICAS QUIMXEL</title>
+        <title>Solicitar Acceso B2B | Los Baños</title>
         <meta name="description" content="Regístrese para obtener una cuenta profesional B2B. Acceda a precios exclusivos, soporte técnico y pedidos rápidos en QUÍMICAS QUIMXEL." />
       </Helmet>
 

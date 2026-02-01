@@ -53,7 +53,7 @@ const Footer = () => {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start space-x-2" style={{ color: '#1b1847' }}>
                 <MapPin className="h-4 w-4 mt-1 flex-shrink-0" />
-                <span>Sevilla y Córdoba, Andalucía</span>
+                <span>Sevilla, Córdoba y Málaga</span>
               </li>
               <li className="flex items-center space-x-2" style={{ color: '#1b1847' }}>
                 <Phone className="h-4 w-4 flex-shrink-0" />

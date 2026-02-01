@@ -67,7 +67,7 @@ const DocumentationPage = () => {
   return (
     <>
       <Helmet>
-        <title>Centro de Documentación Técnica y Legal | QUÍMICAS QUIMXEL</title>
+        <title>Documentación Técnica y Legal | Los Baños</title>
       </Helmet>
 
       <div className="bg-slate-50 min-h-screen">

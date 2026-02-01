@@ -7,7 +7,16 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const keyPath = path.join(__dirname, 'losbanosdata-1f79f-firebase-adminsdk-fbsvc-8208320398.json');
+// Buscar el archivo de credenciales
+const files = fs.readdirSync(__dirname);
+const keyFile = files.find(f => f.startsWith('losbanosdata-1f79f-firebase-adminsdk') && f.endsWith('.json'));
+
+if (!keyFile) {
+    console.error('❌ Error: No se encontró el archivo de credenciales de Firebase.');
+    process.exit(1);
+}
+
+const keyPath = path.join(__dirname, keyFile);
 const serviceAccount = JSON.parse(fs.readFileSync(keyPath, 'utf8'));
 
 if (!admin.apps.length) {

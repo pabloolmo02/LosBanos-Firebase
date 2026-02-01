@@ -14,23 +14,29 @@ const firebaseConfig = {
 };
 
 // Validación básica para evitar crash si faltan variables
-if (!firebaseConfig.apiKey) {
-    console.error("Faltan variables de entorno de Firebase. Revisa tu archivo .env");
-}
+const isFirebaseConfigured = firebaseConfig.apiKey && 
+                              firebaseConfig.authDomain && 
+                              firebaseConfig.projectId;
 
-let app;
-let db;
-let auth;
-let storage;
+let app = null;
+let db = null;
+let auth = null;
+let storage = null;
 
-try {
-    app = initializeApp(firebaseConfig);
-    db = getFirestore(app);
-    auth = getAuth(app);
-    storage = getStorage(app);
-    console.log("Firebase inicializado correctamente");
-} catch (error) {
-    console.error("Error inicializando Firebase:", error);
+if (!isFirebaseConfigured) {
+    console.warn("⚠️ Firebase no está configurado. Verifica que exista un archivo .env con las variables VITE_FIREBASE_*");
+    console.warn("La aplicación continuará funcionando con funcionalidad limitada.");
+} else {
+    try {
+        app = initializeApp(firebaseConfig);
+        db = getFirestore(app);
+        auth = getAuth(app);
+        storage = getStorage(app);
+        console.log("✅ Firebase inicializado correctamente");
+    } catch (error) {
+        console.error("❌ Error inicializando Firebase:", error);
+        console.error("La aplicación continuará funcionando con funcionalidad limitada.");
+    }
 }
 
 export { app, db, auth, storage };

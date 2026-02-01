@@ -9,6 +9,7 @@ import HomePage from '@/pages/HomePage';
 import ProductsPage from '@/pages/ProductsPage';
 import ProductDetailPage from '@/pages/ProductDetailPage';
 import CompanyPage from '@/pages/CompanyPage';
+import VentajasPage from '@/pages/VentajasPage';
 import DocumentationPage from '@/pages/DocumentationPage';
 import LoginPage from '@/pages/LoginPage.jsx';
 import RegisterPage from '@/pages/RegisterPage.jsx';
@@ -56,6 +57,7 @@ const AppContent = () => {
             <Route path="/productos" element={<ProductsPage />} />
             <Route path="/producto/:id" element={<ProductDetailPage />} />
             <Route path="/empresa" element={<CompanyPage />} />
+            <Route path="/ventajas" element={<VentajasPage />} />
             <Route path="/documentacion" element={<DocumentationPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/registro" element={<RegisterPage />} />

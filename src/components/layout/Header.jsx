@@ -36,6 +36,9 @@ const Header = () => {
              <Link to="/empresa" className="text-brand-dark hover:text-brand-blue font-semibold transition-colors text-sm tracking-wide">
               Empresa
             </Link>
+            <Link to="/ventajas" className="text-brand-dark hover:text-brand-blue font-semibold transition-colors text-sm tracking-wide">
+              Ventajas
+            </Link>
             <Link to="/documentacion" className="text-brand-dark hover:text-brand-blue font-semibold transition-colors text-sm tracking-wide">
               Documentación
             </Link>
@@ -111,6 +114,9 @@ const Header = () => {
               </Link>
               <Link to="/empresa" className="text-brand-dark hover:text-brand-blue font-semibold py-2 px-3 rounded-lg hover:bg-brand-base/20 transition-all" onClick={() => setMobileMenuOpen(false)}>
                 Empresa
+              </Link>
+              <Link to="/ventajas" className="text-brand-dark hover:text-brand-blue font-semibold py-2 px-3 rounded-lg hover:bg-brand-base/20 transition-all" onClick={() => setMobileMenuOpen(false)}>
+                Ventajas
               </Link>
               {isAdmin && (
                   <Link to="/admin-users" className="text-purple-700 hover:text-purple-900 font-semibold py-2 px-3 rounded-lg hover:bg-purple-100 transition-all" onClick={() => setMobileMenuOpen(false)}>

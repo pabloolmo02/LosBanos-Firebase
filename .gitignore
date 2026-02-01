@@ -48,3 +48,4 @@ lerna-debug.log*
 # OS
 Thumbs.db
 tools/losbanosdata-1f79f-firebase-adminsdk-fbsvc-f653f6cda0.json
+tools/*firebase-adminsdk*.json

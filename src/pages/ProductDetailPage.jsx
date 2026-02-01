@@ -117,7 +117,7 @@ const ProductDetailPage = () => {
 
   return (
     <>
-      <Helmet><title>{product.name} | Quimxel B2B</title></Helmet>
+      <Helmet><title>{product.name} | Los Baños</title></Helmet>
 
       <div className="bg-slate-50">
         <div className="container mx-auto px-4 py-10">
