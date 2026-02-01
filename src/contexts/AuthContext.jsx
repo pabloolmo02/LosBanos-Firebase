@@ -27,8 +27,7 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     // PROTECCIÓN: Si auth es null o undefined (fallo init Firebase), no hacemos nada o mostramos error.
     if (!auth) {
-        console.error("Auth instance is not initialized. Check Firebase config.");
-        setError("Error de configuración: Firebase no está disponible.");
+        console.warn("⚠️ Auth instance is not initialized. Running in demo mode without authentication.");
         setLoading(false);
         return;
     }

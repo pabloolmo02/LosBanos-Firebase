@@ -11,9 +11,18 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // --- CONFIGURACIÓN ---
-// Archivo de credenciales NUEVO
-const KEY_FILENAME = 'losbanosdata-1f79f-firebase-adminsdk-fbsvc-f653f6cda0.json';
-const KEY_PATH = path.join(__dirname, KEY_FILENAME);
+// Buscar el archivo de credenciales de Firebase (cualquier archivo que coincida con el patrón)
+const files = fs.readdirSync(__dirname);
+const keyFile = files.find(f => f.startsWith('losbanosdata-1f79f-firebase-adminsdk') && f.endsWith('.json'));
+
+if (!keyFile) {
+    console.error('❌ Error: No se encontró el archivo de credenciales de Firebase.');
+    console.error('Busca un archivo que empiece con "losbanosdata-1f79f-firebase-adminsdk" en la carpeta tools/');
+    process.exit(1);
+}
+
+const KEY_PATH = path.join(__dirname, keyFile);
+console.log(`🔑 Usando credenciales: ${keyFile}\n`);
 
 const PRODUCTS_FILE_PATH = path.join(__dirname, '../src/lib/products.js');
 

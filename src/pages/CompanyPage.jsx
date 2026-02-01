@@ -78,7 +78,7 @@ const CompanyPage = () => {
               <img 
                 className="rounded-2xl shadow-xl w-full h-auto object-cover" 
                 alt="Equipo de Los Baños asesorando cliente"
-                src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80" 
+                src="/images/formacion.png" 
                 style={{ maxHeight: '400px' }}
               />
               <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg max-w-xs hidden md:block">
