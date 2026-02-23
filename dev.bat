@@ -1,0 +1,3 @@
+@echo off
+echo Iniciando servidor de desarrollo...
+call npm run dev

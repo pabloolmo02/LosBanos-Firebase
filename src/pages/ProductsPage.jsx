@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link, useSearchParams, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Search, Filter, Lock, ShoppingCart, ChevronDown, ChevronRight } from 'lucide-react';
+import { Search, Filter, Lock, ShoppingCart, ChevronDown, ChevronRight, ChevronUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useAuth } from '@/contexts/AuthContext';
 import { getAllProducts, getProductsByCategory } from '@/services/productService'; 
@@ -21,6 +21,32 @@ const ProductsPage = () => {
   const [isLimpiezaGeneralExpanded, setIsLimpiezaGeneralExpanded] = useState(false); // State for collapsible menu
   const [loading, setLoading] = useState(true);
   const [subcategories, setSubcategories] = useState([]);
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  // Restaurar posición del scroll cuando se vuelve desde un producto
+  useEffect(() => {
+    const savedScrollPosition = sessionStorage.getItem('productsScrollPosition');
+    if (savedScrollPosition && !loading) {
+      // Usar setTimeout para asegurar que el DOM esté completamente renderizado
+      setTimeout(() => {
+        window.scrollTo(0, parseInt(savedScrollPosition, 10));
+        sessionStorage.removeItem('productsScrollPosition');
+      }, 150);
+    }
+  }, [loading]); // Ejecutar solo cuando termine de cargar
+
+  // Mostrar botón de scroll to top cuando se hace scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 300);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -208,25 +234,39 @@ const ProductsPage = () => {
                         <Link 
                             to={`/producto/${product.id}`} 
                             state={{ fromCategory: selectedCategory }} // Pasamos el estado aquí
+                            onClick={() => {
+                              // Guardar la posición actual del scroll antes de navegar
+                              sessionStorage.setItem('productsScrollPosition', window.scrollY.toString());
+                            }}
                             className="block bg-white rounded-xl shadow-sm hover:shadow-lg transition-all border group overflow-hidden h-full flex flex-col"
                         >
                             
                             <div className="aspect-square relative bg-cover bg-center p-4 flex items-center justify-center border-b" style={{ backgroundImage: "url('/images/ProductBackground.PNG')" }}>
-                                {product.images && product.images[0] ? (
+                                {(() => {
+                                  const primaryImage = Array.isArray(product.images)
+                                    ? product.images[0]
+                                    : product.images;
+
+                                  return primaryImage ? (
                                     <img 
                                         className="w-full h-full object-contain transition-transform group-hover:scale-105" 
                                         alt={product.name}
-                                        src={product.images[0]}
+                                        src={primaryImage}
                                         loading="lazy"
+                                        onError={(event) => {
+                                          event.currentTarget.style.display = 'none';
+                                          const placeholder = event.currentTarget.nextElementSibling;
+                                          if (placeholder) placeholder.style.display = 'flex';
+                                        }}
                                     />
-                                ) : (
-                                    <div className="w-full h-full flex items-center justify-center text-slate-400">
-                                        <div className="text-center">
-                                            <span className="block text-4xl mb-2 opacity-50">🧴</span>
-                                            <span className="text-xs uppercase font-medium">Sin imagen</span>
-                                        </div>
+                                  ) : null;
+                                })()}
+                                <div className="w-full h-full flex items-center justify-center text-slate-400" style={{ display: 'none' }}>
+                                    <div className="text-center">
+                                        <span className="block text-4xl mb-2 opacity-50">🧴</span>
+                                        <span className="text-xs uppercase font-medium">Sin imagen</span>
                                     </div>
-                                )}
+                                </div>
                             </div>
                             
                             <div className="p-4 flex-grow flex flex-col">
@@ -277,6 +317,17 @@ const ProductsPage = () => {
           </div>
         </div>
       </div>
+
+      {/* Botón flotante de scroll to top - solo móvil */}
+      {showScrollTop && (
+        <button
+          onClick={scrollToTop}
+          className="md:hidden fixed bottom-6 right-6 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-all z-50 animate-bounce"
+          aria-label="Subir al inicio"
+        >
+          <ChevronUp className="h-6 w-6" />
+        </button>
+      )}
     </>
   );
 };

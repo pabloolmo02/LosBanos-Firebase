@@ -53,7 +53,15 @@ const CartPage = () => {
                   <motion.div key={item.id} layout initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0, x: -50 }} className="flex flex-col sm:flex-row items-center justify-between border-b pb-4 last:border-0">
                     <div className="flex items-center space-x-4 mb-4 sm:mb-0 w-full sm:w-auto">
                       <div className="w-16 h-16 bg-slate-100 rounded-lg overflow-hidden flex-shrink-0">
-                          <img src={item.images && item.images[0] ? item.images[0] : ""} alt={item.name} className="w-full h-full object-contain" />
+                          <img
+                            src={Array.isArray(item.images) ? item.images[0] : item.images || ''}
+                            alt={item.name}
+                            className="w-full h-full object-contain"
+                            onError={(event) => {
+                              console.warn('Imagen no cargada:', Array.isArray(item.images) ? item.images[0] : item.images);
+                              event.currentTarget.src = '/images/logo-letra.png';
+                            }}
+                          />
                       </div>
                       <div>
                         <Link to={`/producto/${item.id}`} className="font-semibold text-slate-900 hover:text-blue-600 block">{item.name}</Link>

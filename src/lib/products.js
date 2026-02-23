@@ -15,7 +15,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=17JIjkiiqy0QUSBI1FyDdHLgHmstjS66f&sz=w1000"
-    ]
+    ],
+    "long_description": "Eliminador de capas acumuladas de ceras, emulsiones autobrillantes y cristalizados. Especialmente indicado para ser utilizado sobre suelos sintéticos (pvc, sintasol, goma, suelos plásticos, etc.) o suelos duros (mármol, terrazo, etc.).",
+    "ph": "12,5 (5%)",
+    "formats": "5L"
   },
   {
     "id": "102",
@@ -33,7 +36,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1LPd_LrmKP-tcxVKn1Xb27ZPkvhXNoCiG&sz=w1000"
-    ]
+    ],
+    "long_description": "Producto para la preparación del cristalizado de suelos de rápida aplicación. Limpia a fondo y tapa el poro. Vitrifica y proporciona una mayor adherencia y duración del cristalizador.",
+    "ph": "2,5 (5%)",
+    "formats": "5L"
   },
   {
     "id": "103",
@@ -51,7 +57,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1DuNf3xEC4hV0pamY-o63bKGydXLtwhMu&sz=w1000"
-    ]
+    ],
+    "long_description": "Producto de marcado carácter ácido. Indicado para la eliminación de residuos e incrustaciones calcáreas, idóneo para eliminar residuos de yeso o cemento en las operaciones de fin de obra, asi como eflorescencias salinas en suelos de barro. Contiene inhibidores de corrosión para metales.",
+    "ph": "1,25 (1%)",
+    "formats": "5L; 10L"
   },
   {
     "id": "104",
@@ -69,7 +78,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=13HIeWE_x9h9q4ltmWYMg-8u4clFmL9e3&sz=w1000"
-    ]
+    ],
+    "long_description": "Producto diseñado para el cristalizado y abrillantado de suelos duros (mármol, terrazo, etc.). De gran duración, ideal para el tratamiento de mármol y terrazo, siendo rápido en su aplicación. Adecuado para el tratamiento de grandes superficies. Gran efecto antideslizante.",
+    "ph": "2 (5%)",
+    "formats": "5L"
   },
   {
     "id": "105",
@@ -87,7 +99,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=15pZUuJz5OpyGfN0nNSFVKHVhs704sBT9&sz=w1000"
-    ]
+    ],
+    "long_description": "Producto diseñado para el abrillantado y cristalizado de suelos duros (mármol, terrazo, etc.). De gran duración, es ideal para el cristalizado y tratamiento en grandes superficies por su bajo coste de mantenimiento y aplicación. No resbala ni marca las pisadas.",
+    "ph": "2,5 (5%)",
+    "formats": "5L"
   },
   {
     "id": "106",
@@ -105,7 +120,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1H9WcEiOwlgNkIt3EMrkA5csVTh3yiRuX&sz=w1000"
-    ]
+    ],
+    "long_description": "Producto diseñado para el abrillantado y cristalizado de suelos duros (mármol, terrazo, etc.). Ideal para el tratamiento de suelos donde se requiera una resistencia notable (centros comerciales, halls, zonas de alto trasiego, etc.).",
+    "ph": "2,5 (5%)",
+    "formats": "5L"
   },
   {
     "id": "107",
@@ -123,7 +141,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1NEEKlvsus8IFqCvQhffNtgjU1LMbKLoc&sz=w1000"
-    ]
+    ],
+    "long_description": "Cera liquida para el sellado y abrillantado de suelos duros (mármol, terrazo, etc.). Posee un alto poder penetrante y de fijación, confiriendo un alto brillo y realzando el color. Aplicable a suelos de cualquier color.",
+    "ph": "5,5 (puro)",
+    "formats": "5L"
   },
   {
     "id": "108",
@@ -141,7 +162,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1gPHzXCBJy6TcOv0xWhknIbFwbzIA1nJl&sz=w1000"
-    ]
+    ],
+    "long_description": "Cera de elevado poder cubriente y dureza, con características autobrillantes y autoabrillantables para suelos de tipo goma, cemento, asfalto, pizarra, terrazos, etc. Aplicable a suelos de colores oscuros.",
+    "ph": "9 (puro)",
+    "formats": "5L"
   },
   {
     "id": "109",
@@ -159,7 +183,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1o15xgkTL7gyNxVcZEZ6BOApneSnJEZYE&sz=w1000"
-    ]
+    ],
+    "long_description": "Cera de elevado poder cubriente y dureza, con características autobrillantes y autoabrillantables para suelos de tipo goma, cemento, asfalto, terrazos, mármoles, etc. Aplicable a suelos de tonos rojizos.",
+    "ph": "9 (puro)",
+    "formats": "5L"
   },
   {
     "id": "110",
@@ -175,7 +202,10 @@ const products = [
     "sector": "Limpieza General",
     "images": [
       "https://drive.google.com/thumbnail?id=128dE9k6hb5Enmx15LJQgc35rflWTcrw8&sz=w1000"
-    ]
+    ],
+    "long_description": "Emulsión compuesta por ceras de gran dureza y brillo duradero. Indicada especialmente para el encerado de superficies vinilicas, plásticos, sintasol y parqué. Producto de características autobrillantes incluso en aplicaciones manuales.",
+    "ph": "8,5 (puro)",
+    "formats": "5L"
   },
   {
     "id": "111",
@@ -191,7 +221,10 @@ const products = [
     "sector": "Limpieza General",
     "images": [
       "https://drive.google.com/thumbnail?id=1KV3m5dC9cISCoFxFFMMtqH6dnB3sszzp&sz=w1000"
-    ]
+    ],
+    "long_description": "Emulsión metalizada que, debido a su alto contenido en solidos y al paquete de aditivos que incorpora, consigue además un alto grado de brillo, dando la sensación de \"mojado\" de las mismas. Especialmente indicado para su aplicación sobre suelos sintéticos (linóleo, pvc, sintasol, etc.).",
+    "ph": "9 (puro)",
+    "formats": "5L"
   },
   {
     "id": "112",
@@ -207,7 +240,10 @@ const products = [
     "sector": "Limpieza General",
     "images": [
       "https://drive.google.com/thumbnail?id=1KcyDXR0N_Sg49T9YPdv1BkWE-T61DUuY&sz=w1000"
-    ]
+    ],
+    "long_description": "Producto compuesto por ceras de gran dureza y brillo moderado, de tipo polímérico y metalizado indicado para su aplicación sobre suelos sintéticos (linóleo, pvc, etc.). También puede ser aplicado en suelos porosos (klinquer, barro manual, mármol, granito, etc.) en donde se requiera un acabado con baja intensidad de brillo.",
+    "ph": "6,5 (puro)",
+    "formats": "5L"
   },
   {
     "id": "113",
@@ -225,7 +261,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1jqw6QtfZOtKrOysZ4LfnYvV8v1xPacDP&sz=w1000"
-    ]
+    ],
+    "long_description": "Cera para el abrillantado de suelos duros (mármol, terrazo. etc.). Muy adecuada como mantenimiento por pulverización con alta velocidad (ultra-speed) o como cera de acabado en cristalizados o finales de obra.",
+    "ph": "5,5 (puro)",
+    "formats": "5L"
   },
   {
     "id": "114",
@@ -241,7 +280,10 @@ const products = [
     "sector": "Limpieza General",
     "images": [
       "https://drive.google.com/thumbnail?id=1giZUIMCyJodNqjokeJJQYJVaEjPDj_dm&sz=w1000"
-    ]
+    ],
+    "long_description": "Sellador de tipo acrilico para el tratamiento de suelos duros y porosos. Su aplicación confiere a las superficies tratadas mejor resistencia mecánica a la abrasión y al desgaste, aumentando su durabilidad.",
+    "ph": "7,7 (puro)",
+    "formats": "5L"
   },
   {
     "id": "115",
@@ -259,7 +301,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1Z82zK-2tT_V-naR6CKQOZhQkua5J7yBV&sz=w1000"
-    ]
+    ],
+    "long_description": "Sellador de tipo acrilico en base solvente, indicado para el tratamiento de suelos de cemento, hormigón, terrazo, o suelos duros. Confiere un efecto repelente de liquidos y polvo, asi como un efecto de compactación de las particulas de cemento y áridos, aumentando la adherencia de los mismos.",
+    "ph": "N/A",
+    "formats": "5L"
   },
   {
     "id": "116",
@@ -277,7 +322,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1Y1aQCq3MirvpPGOS6jX4bo7SXlmIliTA&sz=w1000"
-    ]
+    ],
+    "long_description": "Producto impregnante y consolidante, formulado para la protección contra aceites, suciedad, agua y derrames que puedan producirse como: zumos, productos refrescantes, etc. Protege los materiales contra los agentes externos conservando sus caracteristicas naturales y de transpiración del vapor de agua. No contiene solventes volátiles.",
+    "ph": "5 (puro)",
+    "formats": "10L; 25L"
   },
   {
     "id": "117",
@@ -295,7 +343,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1jnsWOyWYC4WfFHQn6Kx7hbGTW6bffNqf&sz=w1000"
-    ]
+    ],
+    "long_description": "Producto impregnante y consolidante, formulado para la protección contra aceites, suciedad, agua y derrames que puedan producirse como: zumos, productos refrescantes, etc. No altera el aspecto cromático de las superficies donde se aplica, manteniendo su aspecto natural al no formar pelicula.",
+    "ph": "5 (puro)",
+    "formats": "5L"
   },
   {
     "id": "118",
@@ -315,7 +366,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1tAsZ6inrpMswKVV_kP0OH9_9ScMRYZOL&sz=w1000"
-    ]
+    ],
+    "long_description": "Producto para la limpieza de suelos, ya sean de mármol, terrazo, gres, mosaico, etc. Posee bioalcoholes asi como un agradable aroma marino, el cual proporciona una sensación de frescura en el ambiente.",
+    "ph": "6 (puro)",
+    "formats": "1,5L; 5L"
   },
   {
     "id": "119",
@@ -335,7 +389,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1hJ5UV6GLQBUhc1EEiZJ4KvxqYvBYHMjB&sz=w1000"
-    ]
+    ],
+    "long_description": "Indicado para la limpieza de todo tipo de suelos. Especialmente, en áreas donde se precise una profunda limpieza, por su elevado poder desengrasante y su agradable aroma. Combina tensioactivos, bioalcoholes y componentes desodorizantes.",
+    "ph": "6 (puro)",
+    "formats": "1,5L; 5L"
   },
   {
     "id": "120",
@@ -355,7 +412,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1t3FNxgyylW0wGXgTeMfO6PC23jGmymn-&sz=w1000"
-    ]
+    ],
+    "long_description": "Limpiador neutro diseñado para la limpieza de suelos de cerámica, terrazo, mármol, granito pulido, etc. El producto, por su contenido en bioalcoholes no deja residuos ni marcas en el suelo, manteniendo el brillo original y garantizando una excelente capacidad de limpieza.",
+    "ph": "6,5 (puro)",
+    "formats": "1,5L; 5L"
   },
   {
     "id": "121",
@@ -373,7 +433,10 @@ const products = [
     "sector": "Limpieza General",
     "images": [
       "https://drive.google.com/thumbnail?id=1Ef9MgVoQML-T0d-h6ed8DWxFTzGYgFfj&sz=w1000"
-    ]
+    ],
+    "long_description": "Producto para la limpieza de suelos, ya sean de mármol, terrazo, gres, mosaico, etc. Posee bioalcoholes así como un agradable aroma a moras, el cual proporciona un perfume duradero en el ambiente.",
+    "ph": "6,5 (puro)",
+    "formats": "1,5L; 5L"
   },
   {
     "id": "122",
@@ -393,7 +456,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1PFi_-y13j20gCWBPWM8eUuJ9OYj_XT9T&sz=w1000"
-    ]
+    ],
+    "long_description": "Poderoso limpiador detergente ideal para la limpieza de suelos y superficies duras. Combina tensioactivos, bioalcoholes y humectantes con gran capacidad de emulsión de suciedades. Su adecuada composicion le confiere un elevado poder de limpieza a la vez que un agradable y duradero perfume.",
+    "ph": "6,5 (puro)",
+    "formats": "1,5L; 5L"
   },
   {
     "id": "123",
@@ -413,7 +479,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1kDC26IfR1ZGjBlC8htqMFGkmjbptNtoj&sz=w1000"
-    ]
+    ],
+    "long_description": "Indicado para la limpieza de todo tipo de suelos. Posee un agradable aroma a limón, dejando una sensación de frescura en los lugares donde se utiliza. Contiene bioalcoholes y componentes desodorizantes. Por su composición, contiene ingredientes con efecto repelente de insectos.",
+    "ph": "6,5 (puro)",
+    "formats": "1,5L; 5L"
   },
   {
     "id": "124",
@@ -433,7 +502,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1gmJ6_DQ7PdmgG5FtexGm3IOTIYssxWQj&sz=w1000"
-    ]
+    ],
+    "long_description": "Utilizable también en la limpieza de cualquier tipo de superficie, tanto natural como sintética. Por su composición con extractos naturales confiere un fresco olor residual creando un efecto repelente contra los insectos.",
+    "ph": "6 (puro)",
+    "formats": "1,5L; 5L"
   },
   {
     "id": "125",
@@ -451,7 +523,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1eT6I1JQm2I-zj4tfwa3TvTsjkYXkek6O&sz=w1000"
-    ]
+    ],
+    "long_description": "Limpiador concentrado para la limpieza de todo tipo de superficies, gracias a su elevada concentración y pH neutro, combinado con un perfume duradero. Producto de caracteristicas \"Label Free\" ya que por sus componentes y tensioactivos naturales no tienen ningún riesgo en su manipulación y uso.",
+    "ph": "6,5 (puro)",
+    "formats": "5L"
   },
   {
     "id": "126",
@@ -471,7 +546,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1-QPzzbnNRQm51Cgotv93hCRdx20qM7G-&sz=w1000"
-    ]
+    ],
+    "long_description": "Producto de amplias aplicaciones en la limpieza de suelos de cerámica, terrazo, mármol o granito pulido, etc. A su alto poder desengrasante hay que añadir su agradable perfume, garantizando una profunda limpieza.",
+    "ph": "8,5 (puro)",
+    "formats": "1,5L; 5L"
   },
   {
     "id": "127",
@@ -491,7 +569,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1Rl53AsgiJCjgmKkFouzW7iQA5DHNigdv&sz=w1000"
-    ]
+    ],
+    "long_description": "Detergente especialmente formulado para la limpieza de suelos de cerámica, terrazo, mármol o granito pulido, etc. Deja un agradable perfume residual, garantizando una excelente capacidad de limpieza.",
+    "ph": "10,3 (puro)",
+    "formats": "1,5L; 5L"
   },
   {
     "id": "128",
@@ -512,7 +593,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1FafASTkurWMQjFplpieaPcsb9j1I0bsD&sz=w1000"
-    ]
+    ],
+    "long_description": "Indicado para la limpieza de suelos. Por sus cualidades y PH neutro, puede aplicarse en cualquier tipo de superficie.",
+    "ph": "6,5 (puro)",
+    "formats": "1,5L; 5L"
   },
   {
     "id": "129",
@@ -531,7 +615,10 @@ const products = [
     "sector": "Limpieza General",
     "images": [
       "https://drive.google.com/thumbnail?id=1TQ7c4VPayL3Q4vzB3HHsfrnIEWRL95QO&sz=w1000"
-    ]
+    ],
+    "long_description": "Limpiador de alta concentración, para la limpieza de suelos, azulejos, baños, superficies sintéticas (melaminas, pvc, etc.). Deja un perfume muy agradable y un alto brillo sin huellas.",
+    "ph": "6 (puro)",
+    "formats": "1L; 5L"
   },
   {
     "id": "130",
@@ -551,7 +638,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1YMB5ySy1MjN8S3pB-bWJHY6tYqQPTcYm&sz=w1000"
-    ]
+    ],
+    "long_description": "Limpiador multiusos para la limpieza rápida de superficies resistentes al agua y suelos sin tratar. Elimina fácilmente incrustaciones de grasas y otras suciedades persistentes. Ideal para la limpieza de todo tipo de superficies baños, suelos, melaminas, etc.",
+    "ph": "11,4 (puro)",
+    "formats": "5L"
   },
   {
     "id": "131",
@@ -572,7 +662,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1qRKq9oUPcJ4kaUIiK5OuJ8UYS1AzER3o&sz=w1000"
-    ]
+    ],
+    "long_description": "Limpiador desinfectante para todo tipo de suelos y superficies.",
+    "ph": "6 (puro)",
+    "formats": "1,5L; 5L"
   },
   {
     "id": "132",
@@ -593,7 +686,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1PvcMua9eRGYVj9v_SezeIRzPY_F4dBb6&sz=w1000"
-    ]
+    ],
+    "long_description": "Limpiador desinfectante con pH neutro de amplias aplicaciones en la limpieza de todo tipo de superficies lavables y en cualquier tipo de establecimiento (horeca, colegios, geriátricos, etc.).",
+    "ph": "6,5 (puro)",
+    "formats": "1L; 5L"
   },
   {
     "id": "133",
@@ -614,7 +710,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1wgDfhYIPyi9CeF5v6EDdPFbD5Nd0hYnv&sz=w1000"
-    ]
+    ],
+    "long_description": "Detergente desinfectante, limpia y desinfecta todas las superficies en un solo paso. La combinación equilibrada de cloro y secuestrantes hace que el producto sea muy efectivo frente a una amplia gama de microorganismos en todo tipo de aguas.",
+    "ph": "11,4 (puro)",
+    "formats": "1L; 5L"
   },
   {
     "id": "134",
@@ -634,7 +733,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1AnRiof7cRmpmG0b2C9sYWkff_xlhZkdz&sz=w1000"
-    ]
+    ],
+    "long_description": "Limpiador neutro para suelos con baja porosidad y alto brillo, por su rapidez de secado deja la superficie libre de marcas y residuos. Elevado poder antiestático. Indicado su uso con fregadoras automáticas.",
+    "ph": "7 (puro)",
+    "formats": "5L"
   },
   {
     "id": "135",
@@ -652,7 +754,10 @@ const products = [
     "sector": "Limpieza General",
     "images": [
       "https://drive.google.com/thumbnail?id=1l7IttPQz7aXFfc7OOLu3XauYaP5yX4J4&sz=w1000"
-    ]
+    ],
+    "long_description": "Limpiador neutro para suelos con baja porosidad y alto brillo, por su rapidez de secado deja la superficie libre de marcas y residuos. Elevado poder antiestático. Indicado fregadoras automáticas. Exento de perfume.",
+    "ph": "7 (puro)",
+    "formats": "5L"
   },
   {
     "id": "136",
@@ -671,7 +776,10 @@ const products = [
     "sector": "Limpieza General",
     "images": [
       "https://drive.google.com/thumbnail?id=1NtNlZNdidMZdLoa95WZSiwMEMPjCKJBR&sz=w1000"
-    ]
+    ],
+    "long_description": "Producto ideal para la limpieza de todo tipo de suelos por su rápido secado y su bajo nivel espumante. Por sus características de control de espuma está indicado para su uso de forma manual o en fregadoras automáticas. Producto con alto poder desengrasante y de pH moderadamente alcalino, con un agradable perfume cítrico.",
+    "ph": "10,8 (puro)",
+    "formats": "5L"
   },
   {
     "id": "137",
@@ -692,7 +800,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1HhJgpl_Fabo5mxHDe3TfRrWmSHyJKXGz&sz=w1000"
-    ]
+    ],
+    "long_description": "Desengrasante desinfectante de aplicación manual o para uso en máquinas fregadoras. Adecuado para la limpieza y desinfección de suelos, maquinaria, utensilios o todo tipo de superficies dentro de cocinas e industrias alimentarias. Es un desengrasante en base a glioalcoholes, de fácil aclarado.",
+    "ph": "10,5 (puro)",
+    "formats": "5L; 20L"
   },
   {
     "id": "138",
@@ -710,7 +821,10 @@ const products = [
     "sector": "Limpieza General",
     "images": [
       "https://drive.google.com/thumbnail?id=1NUKj94Fsc-Pl9uruslnBB38xH4uLl3RI&sz=w1000"
-    ]
+    ],
+    "long_description": "Detergente alcalino especialmente desarrollado para usar en fregadoras automáticas. Su fórmula baja en espuma elimina suciedades fuertes y grasas en suelos duros, no protegidos y resistentes al agua.",
+    "ph": "11,4 (puro)",
+    "formats": "5L; 20L"
   },
   {
     "id": "139",
@@ -728,7 +842,10 @@ const products = [
     "sector": "Limpieza General",
     "images": [
       "https://drive.google.com/thumbnail?id=1gmGNMiyfpK7KyV7vte_XqZLRXQGsBNoI&sz=w1000"
-    ]
+    ],
+    "long_description": "Detergente alcalino enérgico desarrollado para usar en fregadoras automáticas. Su fórmula baja en espuma elimina suciedades fuertes y grasas en suelos duros, no protegidos y resistentes al agua.",
+    "ph": "13 (5%)",
+    "formats": "5L; 20L"
   },
   {
     "id": "140",
@@ -749,7 +866,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=18wmCJjimpQ_G2HlKhFUnrXCmNQfTEPzS&sz=w1000"
-    ]
+    ],
+    "long_description": "Producto en forma de comprimidos de tipo efervescente que en contacto con el agua libera cloro activo. Ideal para la desinfección de todo tipo de superficies, con un amplio poder germicida frente a un gran número de microorganismos.",
+    "ph": "6,5 (puro)",
+    "formats": "1kg"
   },
   {
     "id": "141",
@@ -767,7 +887,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=11DqbDCQX4qkHLasohgNdXCAHiyZxzr2T&sz=w1000"
-    ]
+    ],
+    "long_description": "Champú para la limpieza de moquetas, alfombras y tapicerías. Elimina eficazmente la suciedad sin estropear ni afectar a las superficies textiles.",
+    "ph": "7 (puro)",
+    "formats": "5L"
   },
   {
     "id": "142",
@@ -785,7 +908,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1o3F3AWYJhXKZG3etfo3cFpIVikRUlNRw&sz=w1000"
-    ]
+    ],
+    "long_description": "Eficaz limpiador desengrasante de tipo espuma seca. Aplicable a todo tipo de tejidos, tanto si son tapicerías, moquetas, alfombras, etc., sin alterar las propiedades ni los colores de los mismos.",
+    "ph": "6 (puro)",
+    "formats": "5L"
   },
   {
     "id": "143",
@@ -803,7 +929,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1NLyi0KZZxzNK1JDeyeC0EThNVS-YlZ8K&sz=w1000"
-    ]
+    ],
+    "long_description": "Producto ideal para la limpieza de todo tipo de superficies de madera y parqué. Posee en su formulación jabones y agentes nutrientes para la madera, consiguiendo limpiar y nutrir al mismo tiempo.",
+    "ph": "8,5 (puro)",
+    "formats": "5L"
   },
   {
     "id": "144",
@@ -821,7 +950,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1ReUbZxVgA9bDXO0e2ti7LEckEbgKG16z&sz=w1000"
-    ]
+    ],
+    "long_description": "Limpiador mantenedor para todo tipo de suelos protegidos. Realza en aplicación en suelos y proporciona un brillo uniforme, evitando la adherencia de polvo.",
+    "ph": "N/A",
+    "formats": "750ml"
   },
   {
     "id": "145",
@@ -839,7 +971,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1QRSFRHqtp8hFr70tmsq_MZgGkfv2K8pd&sz=w1000"
-    ]
+    ],
+    "long_description": "Producto adecuado para la limpieza y abrillantador de suelos con mopa. Actúa eficazmente como captador de polvo y confiriendo un brillo natural.",
+    "ph": "N/A",
+    "formats": "1000cc"
   },
   {
     "id": "146",
@@ -857,7 +992,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1pU_LxXWJz6pSyJtr8P7kNHuvqyT0evlP&sz=w1000"
-    ]
+    ],
+    "long_description": "Producto compuesto por ceras mixtas de gran dureza y brillo duradero. Aplicable en suelos duros (mármol, terrazo, etc.). Su utilizacion continuada confiere un brillo natural y persistente.",
+    "ph": "5 (puro)",
+    "formats": "5L"
   },
   {
     "id": "147",
@@ -877,7 +1015,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1b3MuQxYsf-4m2HsSreSHbs7ZyVkVraZ-&sz=w1000"
-    ]
+    ],
+    "long_description": "Adecuado para la limpieza de superficies no porosas, especialmente cristales, consiguiendo no dejar huellas o rastros.",
+    "ph": "6,5 (puro)",
+    "formats": "750ml; 5L"
   },
   {
     "id": "148",
@@ -897,7 +1038,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1-p4VgUlz4CMZbsuHb_C7KsHDZWUc0hpG&sz=w1000"
-    ]
+    ],
+    "long_description": "Producto para la limpieza y eliminación de suciedad de superficies no porosas (cristales, mamparas de acero...). Elimina rápidamente suciedades dejando un agradable aroma, efecto anti-vaho.",
+    "ph": "6,5 (puro)",
+    "formats": "750ml; 5L"
   },
   {
     "id": "149",
@@ -918,7 +1062,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1TbKtC8ukiogq6xUhiyG-IhCFKMFPuTjf&sz=w1000"
-    ]
+    ],
+    "long_description": "Producto de carácter neutro, indicado en multitud de aplicaciones (limpieza de superficies, porcelanas, cristales, sintéticos, etc.).",
+    "ph": "6 (puro)",
+    "formats": "750ml; 5L"
   },
   {
     "id": "150",
@@ -937,7 +1084,10 @@ const products = [
     "sector": "Limpieza General",
     "images": [
       "https://drive.google.com/thumbnail?id=1kiD7mDWUe3M3GY9EWtRyocgsgUlcQZz9&sz=w1000"
-    ]
+    ],
+    "long_description": "Producto creado para la limpieza y eliminación de suciedad de superficies no porosas (cristales, mamparas, etc.). Contiene en su composición, elementos de gran eficacia de limpieza y con efecto anti-vaho. Ideal para la limpieza rápida de cualquier superficie sin dejar rastros ni velos.",
+    "ph": "10,5 (puro)",
+    "formats": "750ml; 5L"
   },
   {
     "id": "151",
@@ -957,7 +1107,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1WgPVCrTn_ArLYqcKoYAkDUlSsHvSBt6Y&sz=w1000"
-    ]
+    ],
+    "long_description": "Producto de limpieza general de todo tipo de superficies lavables. Elimina aceites y residuos solubles en agua, confiriendo una fresca y agradable fragancia.",
+    "ph": "10 (puro)",
+    "formats": "750ml; 5L"
   },
   {
     "id": "152",
@@ -975,7 +1128,10 @@ const products = [
     "sector": "Limpieza General",
     "images": [
       "https://drive.google.com/thumbnail?id=1Myb3DS_oz6IAhUTZpYUkQkzJlANrnKvN&sz=w1000"
-    ]
+    ],
+    "long_description": "Limpia y cuida eficazmente todo tipo de superficies lavables, dejando un agradable aroma floral. Su contenido en bioalcoholes le confiere una rápida limpieza y posterior secado.",
+    "ph": "7 (puro)",
+    "formats": "750ml; 5L"
   },
   {
     "id": "153",
@@ -994,7 +1150,10 @@ const products = [
     "sector": "Limpieza General",
     "images": [
       "https://drive.google.com/thumbnail?id=1YFQfmB4ZhrKvD0nxGNowFwrjyOO9GnnS&sz=w1000"
-    ]
+    ],
+    "long_description": "Indicado para la limpieza de todo tipo de superficies lavables. Posee en su composición elementos biodegradables, altamente respetuosos con el medio ambiente.",
+    "ph": "9 (puro)",
+    "formats": "750ml; 5L"
   },
   {
     "id": "154",
@@ -1015,7 +1174,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=17sTg2DGZf86-wtr4cPDtP24uiymWMvA7&sz=w1000"
-    ]
+    ],
+    "long_description": "Limpiador desinfectante perfumado, listo al uso, de aplicación en el ámbito público y privado. Puede utilizarse en todo tipo de superficies lavables de cualquier establecimiento (horeca, colegios, geriátricos, etc.).",
+    "ph": "9 (puro)",
+    "formats": "750ml"
   },
   {
     "id": "155",
@@ -1036,7 +1198,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1zEWtzLVAVNv5QXj8elw8mtGTaPAamHBt&sz=w1000"
-    ]
+    ],
+    "long_description": "Posee como principio activo biocida, una combinación de una amina terciaria y un glicol éter en solución hidroalcohólica. Tiene propiedades viricidas, bactericidas y fungicidas. Para la desinfección de instalaciones de la industria alimentaria, en general. De rápido secado, por ello se aconseja su uso en industrias o procesos donde no sea deseable la acumulación de agua o humedad.",
+    "ph": "9,5 (puro)",
+    "formats": "750ml; 5L; 20L"
   },
   {
     "id": "156",
@@ -1052,7 +1217,10 @@ const products = [
     "sector": "Limpieza General",
     "images": [
       "https://drive.google.com/thumbnail?id=1nQpGFYT_je8UoU9lD6YQdmwljoaqf4FV&sz=w1000"
-    ]
+    ],
+    "long_description": "Producto indicado para la limpieza y abrillantado de cualquier tipo de superficie porosa (skay, piel, madera...). Por su composición no afecta ni daña ningún tipo de superficie. Contiene elementos reengrasantes para piel y madera que nurtren este tipo de superficies.",
+    "ph": "13 (puro)",
+    "formats": "750ml; 5L"
   },
   {
     "id": "157",
@@ -1072,7 +1240,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1_ColHYTjsIndsSDaNBc5On9C5no2VLav&sz=w1000"
-    ]
+    ],
+    "long_description": "Poderoso y enérgico limpiador desengrasante contra la suciedad persistente, como tinta de escritura (boligrafo, rotulador, etc.) y manchas de origen grasiento. Indicado para la utilización en cualquier tipo de superficie.",
+    "ph": "N/A",
+    "formats": "750ml; 5L"
   },
   {
     "id": "158",
@@ -1092,7 +1263,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=188T5VkFPWbTEe7QCPJBJrNrErBGj_N8Q&sz=w1000"
-    ]
+    ],
+    "long_description": "Producto que por su formulación innovadora, crea una fina pelicula brillante y uniforme sobre superficies de acero inoxidable. Su aplicación crea un efecto antiestático y de protección frente a grasas y suciedades.",
+    "ph": "N/A",
+    "formats": "750ml; 5L"
   },
   {
     "id": "159",
@@ -1112,7 +1286,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1_k6PDMSa1c7TKUEzUKgxxetZcNqIoBlt&sz=w1000"
-    ]
+    ],
+    "long_description": "Spray limpiador para todo tipo de superficies de acero inoxidable (mostradores, mobiliario de colectividades, frigorificos, etc.). Con su aplicación se crea un efecto antiestático y de protección frente a grasas y suciedades.",
+    "ph": "N/A",
+    "formats": "520cc"
   },
   {
     "id": "160",
@@ -1130,7 +1307,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1PVeO4pqEIpAtj3mvtzlbJww4UTPnC84P&sz=w1000"
-    ]
+    ],
+    "long_description": "Producto utilizado para la limpieza por inyección-extracción de moquetas, tapicerias de automóviles, etc. Posee en su composición tensioactivos con un alto poder humectante y desengrasante.",
+    "ph": "11,4 (puro)",
+    "formats": "5L; 20L"
   },
   {
     "id": "161",
@@ -1150,7 +1330,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1YQCREZNEQphrkRdMUyyno4vdWM5CUD9F&sz=w1000"
-    ]
+    ],
+    "long_description": "Limpiador en crema versátil, no abrasivo para superficies duras resistentes al agua. Adecuado para usar en instalaciones cromadas y de acero inoxidable, esmalte, baldosas de cerámica vitrificada, baños de plástico duro, etc.",
+    "ph": "10 (1%)",
+    "formats": "750ml"
   },
   {
     "id": "162",
@@ -1168,7 +1351,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1_z_-b8QeoLJTbuVt3rSai1QoZlpLlb2d&sz=w1000"
-    ]
+    ],
+    "long_description": "Detergente para el mantenimiento diario de baños, griferias, suelos y revestimientos en general. Con su utilización podremos evitar la acumulación de cal y la formación de incrustaciones. No altera las superficies cromadas, dándoles un aspecto brillante.",
+    "ph": "2,1 (puro)",
+    "formats": "750ml; 5L"
   },
   {
     "id": "163",
@@ -1187,7 +1373,10 @@ const products = [
     "sector": "Limpieza General",
     "images": [
       "https://drive.google.com/thumbnail?id=1Mp-QdTE2YIYZme813Pun7kEGed2hCaa8&sz=w1000"
-    ]
+    ],
+    "long_description": "Indicado para la limpieza de cualquier tipo de superficie en baños. Evita la acumulación de incrustaciones y las elimina. Su efecto limpiador junto a su agradable perfume ofrecen un elevado rendimiento.",
+    "ph": "2 (puro)",
+    "formats": "750ml; 5L"
   },
   {
     "id": "164",
@@ -1205,7 +1394,10 @@ const products = [
     "sector": "Limpieza General",
     "images": [
       "https://drive.google.com/thumbnail?id=1q8ynCu2MIAZuoFwyMFK6Bg7ymQ9JIJr3&sz=w1000"
-    ]
+    ],
+    "long_description": "Desinfectante desodorizante con caracteristicas bactericidas, fungicidas y viricidas, que actúa eficazmente por la combinación de aldehidos con amonios cuaternarios. Muy adecuado en la desinfección y desodorización de zonas de residuos y contenedores.",
+    "ph": "5 (puro)",
+    "formats": "5L"
   },
   {
     "id": "165",
@@ -1223,7 +1415,10 @@ const products = [
     "sector": "Limpieza General",
     "images": [
       "https://drive.google.com/thumbnail?id=1USOPJtWP66FvW9LM2uaZg4qvF5jnOn6-&sz=w1000"
-    ]
+    ],
+    "long_description": "Limpiador anticalcáreo en gel, indicado para la eliminación de restos de cal y jabón en griferías, azulejos, inodoros, mamparas, etc., devolviéndoles su brillo original Por su formulación dificulta la aparición de incrustaciones.",
+    "ph": "2,25 (1%)",
+    "formats": "1L"
   },
   {
     "id": "166",
@@ -1241,7 +1436,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1fLrnW_6FRBvngjuvNe0ilp0NKwRQ7V-3&sz=w1000"
-    ]
+    ],
+    "long_description": "Producto muy adecuado para la limpieza y mantenimiento diario de aseos. Aplicar el producto bajo el borde superior del inodoro ayudándose para ello del tapón direccional que posee el envase. Deja una perfecta limpieza y un agradable perfume en todo el baño.",
+    "ph": "2,1 (puro)",
+    "formats": "750ml"
   },
   {
     "id": "167",
@@ -1259,7 +1457,10 @@ const products = [
     "sector": "Limpieza General",
     "images": [
       "https://drive.google.com/thumbnail?id=1bjUr27N-yTuUcU2znRvkjMYC3QJPMQqN&sz=w1000"
-    ]
+    ],
+    "long_description": "Limpiador de gran poder desincrustante y desodorizante creado para la limpieza en aseos. Apto para la eliminación de incrustaciones en inodoros gracias a su poder de fijación.",
+    "ph": "2,75 (puro)",
+    "formats": "750ml"
   },
   {
     "id": "168",
@@ -1277,7 +1478,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1uKWcZRumRLf0Sykywcq2taipdP2py6ip&sz=w1000"
-    ]
+    ],
+    "long_description": "Potente limpiador con poder desincrustante y desodorizante para inodoros y urinarios. Elimina todo tipo de suciedad y manchas de cal, sarro, óxidos y sales metálicas. No aplicar directamente sobre griferias y superficies cromadas.",
+    "ph": "1,75 (1%)",
+    "formats": "1L; 5L"
   },
   {
     "id": "169",
@@ -1295,7 +1499,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1h-5kRQ4PdoB4OcexNyX9rkq8E27L-Xku&sz=w1000"
-    ]
+    ],
+    "long_description": "Enérgico limpiador con poder desincrustante y desodorizante para inodoros y urinarios. Elimina todo tipo de suciedad y manchas de cal, sarro, óxidos y sales metálicas. No aplicar directamente sobre griferias y superficies cromadas.",
+    "ph": "1,25 (1%)",
+    "formats": "1L; 5L"
   },
   {
     "id": "170",
@@ -1313,7 +1520,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1sZtKieNURWd1eKQkvZmaK2B2dpFhblep&sz=w1000"
-    ]
+    ],
+    "long_description": "Desatascador de tipo alcalino, su fórmula más densa le confiere un gran poder para eliminar atascos y malos olores producidos por restos orgánicos (comida, celulosa, textiles, cabellos, jabones, etc.). Su uso periódico previene la formación de malos olores en los desagües.",
+    "ph": "13,5 (1%)",
+    "formats": "1L; 5L"
   },
   {
     "id": "171",
@@ -1331,7 +1541,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1M_-M_My-u5hcgeGO1LZSaj2ROMLgNUED&sz=w1000"
-    ]
+    ],
+    "long_description": "Producto especial para diluir los residuos orgánicos e inorgánicos de los desagües. Actúa sin necesidad de acciones mecánicas o manuales. Por su extrema potencia debe usarse siguiendo cuidadosamente las instrucciones de empleo.",
+    "ph": "<1 (1%)",
+    "formats": "1L"
   },
   {
     "id": "172",
@@ -1351,7 +1564,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1sCFx7pxXGdh2NodKlYP6qzLGDA1MtdnP&sz=w1000"
-    ]
+    ],
+    "long_description": "Desengrasante y emulsionante de grasas, aceites y otras suciedades. Indicado para la limpieza general de superficies que pueden ser alteradas por compuestos alcalinos (aluminio, superficies pintadas, etc.).",
+    "ph": "9 (puro)",
+    "formats": "5L"
   },
   {
     "id": "173",
@@ -1371,7 +1587,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1EONGt6eJURUgvZ3mZ_ePlQbmlCgyEk3W&sz=w1000"
-    ]
+    ],
+    "long_description": "Producto de elevado poder detergente y disolvente de suciedades orgánicos y aceites. Por sus características es adecuado en la limpieza de cualquier tipo de superficie (textil, cocina, automoción, etc.).",
+    "ph": "12 (5%)",
+    "formats": "5L"
   },
   {
     "id": "174",
@@ -1391,7 +1610,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1lw3dzu-PrIBJ1P47AOlYRDKk7k0gzEWp&sz=w1000"
-    ]
+    ],
+    "long_description": "Desengrasante y emulsionante de grasas, aceites y otras suciedades. Posee un elevado poder humectante, lo que facilita la penetración y ataque sobre la suciedad. Puede usarse incluso a altas temperaturas por no ser inflamable y con cualquier dureza de agua por su alto poder secuestrante.",
+    "ph": "11,4 (puro)",
+    "formats": "750ml; 5L"
   },
   {
     "id": "175",
@@ -1411,7 +1633,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1DONn0rMWBWG_PU6HfYAOzHwVShDYp2uO&sz=w1000"
-    ]
+    ],
+    "long_description": "Desengrasante para la limpieza de grasas y suciedades muy incrustadas en la limpieza de maquinaria, superficies muy sucias, vehículos pesados, asi como cocinas, utensilios, filtros, parrillas, suelos de industrias y talleres, etc. Adecuado para la limpieza de contenedores de basura.",
+    "ph": "12,5 (5%)",
+    "formats": "5L; 20L"
   },
   {
     "id": "176",
@@ -1430,7 +1655,10 @@ const products = [
     "sector": "Limpieza General",
     "images": [
       "https://drive.google.com/thumbnail?id=1oHoSJsCIUJhsTD8OThrHRPAgLXPYlkbZ&sz=w1000"
-    ]
+    ],
+    "long_description": "Indicado para la limpieza de superficies engrasadas o con elevada suciedad. Adecuado en cocinas, filtros, campanas, acero inoxidable, manchas sobre textiles, azulejos, etc.",
+    "ph": "11,5 (5%)",
+    "formats": "750ml; 5L"
   },
   {
     "id": "177",
@@ -1450,7 +1678,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1Kj2__W6nnMo75rb_bXdppgSgs4o8z_B4&sz=w1000"
-    ]
+    ],
+    "long_description": "Desengrasante enérgico utilizable en la limpieza de grasas y suciedades muy incrustadas. Utilizable en frío o en caliente por ser un producto no inflamable. Su elevado poder emulsionante de grasas, aceites e hidrocarburos lo hacen muy indicado para la limpieza de maquinaria pesada, cocinas, suelos industriales, etc.",
+    "ph": "13 (5%)",
+    "formats": "5L; 10L; 20L"
   },
   {
     "id": "178",
@@ -1470,7 +1701,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=103VGwYNSt1RsQqMB1F_FjVn-19A1sSqN&sz=w1000"
-    ]
+    ],
+    "long_description": "Desengrasante de gran potencia y eficacia, indicado en la limpieza de planchas, hornos y en disolución es adecuado también en la limpieza de freidoras. Elimina incluso la suciedad muy requemada.",
+    "ph": "13 (1%)",
+    "formats": "1,25kg; 6kg"
   },
   {
     "id": "179",
@@ -1489,7 +1723,10 @@ const products = [
     "sector": "Limpieza General",
     "images": [
       "https://drive.google.com/thumbnail?id=1cqvMJRnO-lTLDyBmHVSYfoJ5buq0ew-6&sz=w1000"
-    ]
+    ],
+    "long_description": "Desengrasante desinfectante de múltiples utilidades, posee en su formulación principios activos basados en amonios cuaternarios. Destinado a la limpieza de superficies de todo tipo, en cocinas e industrias alimentarias. Es un desengrasante en base a glioalcoholes, y es de fácil aclarado. Adecuado para la limpieza y desinfección de maquinaria, superficies, utensilios, etc.",
+    "ph": "12,5 (5%)",
+    "formats": "750ml; 5L; 20L"
   },
   {
     "id": "180",
@@ -1508,7 +1745,10 @@ const products = [
     "sector": "Limpieza General",
     "images": [
       "https://drive.google.com/thumbnail?id=1nYo7A-dYQ16MHHBz0-jbs6WTW6MnqP9M&sz=w1000"
-    ]
+    ],
+    "long_description": "Desinfectante basado en aminas terciarias efectivo frente a bacterias, hongos, virus encapsulados y levaduras. Posee actividad Listericida. Adecuado para la desinfección en cualquier industria del sector alimentario. Posee caracteristicas detergentes realizando la limpieza y desinfección al mismo tiempo. Efectivo a bajas temperaturas y no se degrada en presencia de materia orgánica.",
+    "ph": "11,2 (puro)",
+    "formats": "750ml; 5L; 20L"
   },
   {
     "id": "181",
@@ -1527,7 +1767,10 @@ const products = [
     "sector": "Limpieza General",
     "images": [
       "https://drive.google.com/thumbnail?id=1lTm9K4XZNFNd_9gRK_0FlQsEis5_O2jl&sz=w1000"
-    ]
+    ],
+    "long_description": "Desinfectante con acción detergente, fungicida, bactericida y viricida. Contiene amonios cuaternarios y agente humectante que hacen que sea muy efectivo frente a una amplia gama de microorganismos en todo tipo de aguas. Garantiza la desinfección en diferentes campos de la industria alimentaria e Institucional.",
+    "ph": "7 (puro)",
+    "formats": "5L"
   },
   {
     "id": "182",
@@ -1547,7 +1790,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1B79LDjcbdrLrfJv-aU-ULxMJw3Y4fZgM&sz=w1000"
-    ]
+    ],
+    "long_description": "Desinfectante de amplio espectro bactericida y germicida. Elimina eficazmente germenes y bacterias en frutas y verduras. También utilizable en la cloración de agua para consumo humano.",
+    "ph": "11 (5%)",
+    "formats": "5L"
   },
   {
     "id": "183",
@@ -1567,7 +1813,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1Fkh_9UtNWqRkvioD7gPhVqefm91Q_2i6&sz=w1000"
-    ]
+    ],
+    "long_description": "Formulación integrada por microorganismos naturales y tensioactivos que lo hacen efectivo para prevenir y eliminar las emisiones de malos olores generados por la acumulación de residuos orgánicos. Muy efectivo en el mantenimiento de drenajes, fosas sépticas, separadoras de grasas y sistemas de depuración de residuos.",
+    "ph": "7 (puro)",
+    "formats": "5L; 20L"
   },
   {
     "id": "184",
@@ -1587,7 +1836,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1nlC4ZEgRJYqMGyfoZF7h4O98rkO5Qez9&sz=w1000"
-    ]
+    ],
+    "long_description": "Producto diseñado para la limpieza y eliminación de manchas de óxido sobre acero inoxidable. Su utilización regenera y pasiviza las superficies tratadas.",
+    "ph": "1,5 (5%)",
+    "formats": "5L"
   },
   {
     "id": "185",
@@ -1607,7 +1859,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=18Waz-Plsk4hdAzyR6ZS5cnK3Zr9lGlo3&sz=w1000"
-    ]
+    ],
+    "long_description": "Limpiador neutro, indicado en multitud de aplicaciones (limpieza de superficies, lavado de vajillas, cristales...).",
+    "ph": "6 (puro)",
+    "formats": "1,5L; 5L"
   },
   {
     "id": "186",
@@ -1627,7 +1882,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1p4IGfgQlbfBxIWYSdi6Ds4Ovi1UTjFHi&sz=w1000"
-    ]
+    ],
+    "long_description": "Detergente liquido para lavado manual de ollas, cacerolas. vajilla, vasos y todo tipo de utensilios lavables. Posee en su composición un agradable perfume y poderosos reengrasantes de la piel.",
+    "ph": "6 (puro)",
+    "formats": "1,5L; 5L"
   },
   {
     "id": "187",
@@ -1647,7 +1905,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=18jfszAfzOJE-Wm7wEE41zKhxiaIBkGJu&sz=w1000"
-    ]
+    ],
+    "long_description": "Detergente liquido para lavado manual de ollas, cacerolas, vajilla, vasos y todo tipo de utensilios lavables. Elimina la grasa y comida reseca facilitando el aclarado sin velos. Incorpora poderosos reengrasantes de la piel.",
+    "ph": "6 (puro)",
+    "formats": "1,5L; 5L"
   },
   {
     "id": "188",
@@ -1667,7 +1928,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1Hq7MSJ-iKa_Kr5Je5NArrgEyhnmnubun&sz=w1000"
-    ]
+    ],
+    "long_description": "Detergente liquido para lavado manual de ollas, cacerolas. vajilla, vasos y todo tipo de utensilios lavables. Elimina la grasa y comida reseca facilitando el aclarado sin velos. Incorpora poderosos reengrasantes de la piel.",
+    "ph": "6 (puro)",
+    "formats": "5L"
   },
   {
     "id": "189",
@@ -1686,7 +1950,10 @@ const products = [
     "sector": "Limpieza General",
     "images": [
       "https://drive.google.com/thumbnail?id=1ulBvfd0Zh1JkdU6QFY3O9etArBga536Q&sz=w1000"
-    ]
+    ],
+    "long_description": "Detergente neutro, utilizable en la limpieza a mano de vajillas. cristalerias, cuberterias, utensilios de cocina, etc. Gran poder de limpieza y elevada capacidad espumante.",
+    "ph": "6 (puro)",
+    "formats": "5L"
   },
   {
     "id": "190",
@@ -1706,7 +1973,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1L0ofw3PyubyJymVV8e1gvPe7cANK6lpF&sz=w1000"
-    ]
+    ],
+    "long_description": "Detergente concentrado liquido para lavado manual de ollas, cacerolas, vajilla, vasos y todo tipo de utensilios lavables. Elimina la grasa y comida reseca, manteniendo una espuma duradera, facilitando el aclarado sin velos. Incorpora poderosos reengrasantes de la piel.",
+    "ph": "6 (puro)",
+    "formats": "750ml; 5L"
   },
   {
     "id": "191",
@@ -1726,7 +1996,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1DibfYoyu3CdDISMkdoMT0cRlfDIXj0xo&sz=w1000"
-    ]
+    ],
+    "long_description": "Detergente ultra concentrado para lavado manual de ollas, cacerolas, vajilla, vasos y todo tipo de utensilios lavables. Elimina la grasa y comida reseca facilitando el aclarado sin velos. Incorpora componentes tensioactivos y poderosos reengrasantes que protegen la capa epitelial.",
+    "ph": "6 (puro)",
+    "formats": "750ml; 5L"
   },
   {
     "id": "192",
@@ -1746,7 +2019,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1P7sOOUz14VLVg9q8UNfF8xjeAqgFkHjC&sz=w1000"
-    ]
+    ],
+    "long_description": "Limpiador en polvo ácido de alto poder desengrasante, especialmente desarrollado para el lavado de baterias de cocina, paellas, cacerolas, sartenes y utensilios de cocina.",
+    "ph": "1,5 (1%)",
+    "formats": "10kg"
   },
   {
     "id": "193",
@@ -1766,7 +2042,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1btIejcNVNpIoyxTgDdiEKDntJ1NlFuLt&sz=w1000"
-    ]
+    ],
+    "long_description": "Detergente aplicable al lavado en máquinas lavavajillas. Posee un elevado poder de limpieza para eliminar la suciedad en cristalerias, vajillas, cuberterias, etc. Posee una alta concentración en secuestrantes, dispersantes y agentes antiredeposición haciéndolo aplicable en aguas de dureza media - alta. Exento de espuma. Producto alcalino.",
+    "ph": "12,5 (1%)",
+    "formats": "6kg; 12kg; 24kg"
   },
   {
     "id": "194",
@@ -1786,7 +2065,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1RwRBL7fs0YsaOfn63-yjJNOfEiwo1MsP&sz=w1000"
-    ]
+    ],
+    "long_description": "Detergente liquido alcalino concentrado para el lavado automático de vajilla, su alta concentración en secuestrantes, dispersantes y agentes anti redeposición le otorgan excelentes resultados en aguas blandas u osmotizadas. Espuma controlada.",
+    "ph": "12,5 (1%)",
+    "formats": "6kg; 12kg; 24kg"
   },
   {
     "id": "195",
@@ -1806,7 +2088,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1f92wqa1t2YviLt3t-pGytaFUFJu1h74y&sz=w1000"
-    ]
+    ],
+    "long_description": "Detergente liquido alcalino concentrado para el lavado automático de vajilla, su alta concentración en secuestrantes, dispersantes y agentes anti redeposición le otorgan excelentes resultados en aguas de dureza media y alta. Espuma controlada.",
+    "ph": "12,5 (1%)",
+    "formats": "6kg; 12kg; 24kg"
   },
   {
     "id": "196",
@@ -1825,7 +2110,10 @@ const products = [
     "sector": "Limpieza General",
     "images": [
       "https://drive.google.com/thumbnail?id=1g-xKEh2T_jO5qHLr-zHV_YNPvLH9wW37&sz=w1000"
-    ]
+    ],
+    "long_description": "Vajillas automáticas universal para el lavado en máquinas lavavajillas. Posee un elevado poder de limpieza para eliminar la suciedad en cristalerias, vajillas, cuberterias, etc. Por su concentración en secuestrantes, dispersantes y agentes antirredeposición, es aplicable en aguas de cualquier dureza. Exento de espuma.",
+    "ph": "12 (1%)",
+    "formats": "6kg; 12kg; 24kg"
   },
   {
     "id": "197",
@@ -1845,7 +2133,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1XWynkTFH8z9349j10LN5_jj1ypl4W9Q4&sz=w1000"
-    ]
+    ],
+    "long_description": "Detergente liquido alcalino concentrado para el lavado automático de vajilla, su alta concentración en secuestrantes, dispersantes y agentes anti redeposicion le otorgan excelentes resultados en aguas de elevada dureza. Espuma controlada.",
+    "ph": "12,5 (1%)",
+    "formats": "6kg; 12kg; 24kg"
   },
   {
     "id": "198",
@@ -1863,7 +2154,10 @@ const products = [
     "sector": "Limpieza General",
     "images": [
       "https://drive.google.com/thumbnail?id=1LxHtwP2_pUcvDyVRMwguBbt97i8JEQln&sz=w1000"
-    ]
+    ],
+    "long_description": "Detergente liquido alcalino concentrado para el lavado automático de vajilla, su alta concentración en secuestrantes, dispersantes y agentes anti redeposición le otorgan excelentes resultados en aguas de extrema dureza. Espuma controlada.",
+    "ph": "12,5 (1%)",
+    "formats": "6kg; 12kg; 24kg"
   },
   {
     "id": "199",
@@ -1883,7 +2177,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1L_L8yHHSmr75kE7sveOU17je3PjXNSCN&sz=w1000"
-    ]
+    ],
+    "long_description": "Detergente liquido concentrado para el lavado automático de vajilla, su alta concentración en secuestrantes, dispersantes y agentes anti redeposición le otorgan excelentes resultados en aguas de elevada dureza. Especialmente indicado para el lavado de cristalerias y aluminio.",
+    "ph": "11,4 (puro)",
+    "formats": "6kg; 12kg; 24kg"
   },
   {
     "id": "200",
@@ -1903,7 +2200,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1uG6vs__UqDtDHnNkplFC4wQpZmQBWeWv&sz=w1000"
-    ]
+    ],
+    "long_description": "Desincrustante de marcado carácter ácido que actúa eficazmente como eliminador de incrustaciones de cal. Indicado en la limpieza de las maquinas lavavajillas. Posee en su composición potentes inhibidores para evitar el ataque sobre los metales.",
+    "ph": "2 (1%)",
+    "formats": "5L; 10L"
   },
   {
     "id": "201",
@@ -1921,7 +2221,10 @@ const products = [
     "sector": "Limpieza General",
     "images": [
       "https://drive.google.com/thumbnail?id=1OXVN2iERvQ1ifrCAJpk4_i4J5gle-fUM&sz=w1000"
-    ]
+    ],
+    "long_description": "Abrillantador ácido para el lavado automático de vajilla. Por su composición no produce espuma, permitiendo un secado rápido, uniforme y sin velos. Adecuado para aguas baja-media dureza e incluso osmotizadas.",
+    "ph": "2,1 (puro)",
+    "formats": "5L; 10L; 20L"
   },
   {
     "id": "202",
@@ -1941,7 +2244,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1AXJGRQqZixndxdJdg8FMiQdvIFOd8ix_&sz=w1000"
-    ]
+    ],
+    "long_description": "Abrillantador neutro para el lavado automático de vajilla. Por su composición no produce espuma, permitiendo un secado rápido, uniforme y sin velos. Adecuado para todo tipo de aguas.",
+    "ph": "5 (puro)",
+    "formats": "5L; 10L; 20L"
   },
   {
     "id": "203",
@@ -1960,7 +2266,10 @@ const products = [
     "sector": "Limpieza General",
     "images": [
       "https://drive.google.com/thumbnail?id=1a3U48WJIqJmrtVC9rlloUXKjq2d9FQVT&sz=w1000"
-    ]
+    ],
+    "long_description": "Se utiliza como aditivo en el enjuague y aclarado final en máquinas o túneles lavavajillas. Por su composición no produce espuma, proporciona un excelente secado y abrillantado de todos los utensilios lavados. Es adecuado para trabajar con cualquier tipo de agua.",
+    "ph": "2,75 (puro)",
+    "formats": "5L; 10L; 20L"
   },
   {
     "id": "204",
@@ -1980,7 +2289,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=10Em3RKSolG-Xyq9OKlZgesleK856NkoJ&sz=w1000"
-    ]
+    ],
+    "long_description": "Abrillantador ácido para el lavado automático de vajilla. Por su composición no produce espuma, permitiendo un secado rápido, uniforme y sin velos. Adecuado para aguas de elevada dureza.",
+    "ph": "2,1 (puro)",
+    "formats": "5L; 10L; 20L"
   },
   {
     "id": "205",
@@ -2001,7 +2313,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1Mb607vPeWZtHe8orKxXg0pXDRq3rbwNL&sz=w1000"
-    ]
+    ],
+    "long_description": "Gel hidroalcohólico indicado para la desinfección de las manos sin aclarado incluida la desinfección prequirúrgica de manos. Su gran poder desinfectante y la ausencia de perfumes y colorantes, lo hacen especialmente indicado para su uso en servicios médicos y centros hospitalarios.",
+    "ph": "7 (puro)",
+    "formats": "100ml; 500ml; 1L; 5L"
   },
   {
     "id": "206",
@@ -2019,7 +2334,10 @@ const products = [
     "sector": "Limpieza General",
     "images": [
       "https://drive.google.com/thumbnail?id=18l2XaDcs-JrRmn883HJ9tvwXL9AZVdKC&sz=w1000"
-    ]
+    ],
+    "long_description": "Loción hidroalcohólica indicada para la desinfección de las manos sin aclarado incluida la desinfección prequirúrgica de manos. Su gran poder desinfectante y la ausencia de perfumes, lo hacen especialmente indicado para su uso en servicios médicos y centros hospitalarios.",
+    "ph": "7 (puro)",
+    "formats": "100ml; 500ml; 5L"
   },
   {
     "id": "207",
@@ -2037,7 +2355,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1Mw3EevFg7XNvdpWo68cufOXxNSb3mV4B&sz=w1000"
-    ]
+    ],
+    "long_description": "Gel para limpieza e higiene de piel y cabello, contiene componentes dermatológicos y compuestos reengrasantes de la capa epitelial, que actúan evitando la incidencia de afecciones de la piel, manteniéndola suave y con un agradable perfume.",
+    "ph": "5 (puro)",
+    "formats": "500ml; 750ml; 1L; 5L"
   },
   {
     "id": "208",
@@ -2055,7 +2376,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1RH7GOdoH8QnQ16jCK4_6BhAOGMxoRsD-&sz=w1000"
-    ]
+    ],
+    "long_description": "Gel para limpieza e higiene de manos, contiene componentes dermatológicos y compuestos reengrasantes de la capa epitelial, que actúan evitando la incidencia de afecciones de la piel, manteniendola suave y agradablemente perfumada.",
+    "ph": "6 (puro)",
+    "formats": "5L"
   },
   {
     "id": "209",
@@ -2073,7 +2397,10 @@ const products = [
     "sector": "Limpieza General",
     "images": [
       "https://drive.google.com/thumbnail?id=1AgElqXYCs69jEZwQLiFY4pHFQAGbqGX3&sz=w1000"
-    ]
+    ],
+    "long_description": "Adecuado para la limpieza y cuidado frecuente de las manos. Protege el medio ambiente y genera un impacto minimo sobre los ecosistemas. Sin colorantes.",
+    "ph": "6 (puro)",
+    "formats": "5L"
   },
   {
     "id": "210",
@@ -2093,7 +2420,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1Y5L1pKpyVOHh4PUNfTy3NUlxWTC0VqeG&sz=w1000"
-    ]
+    ],
+    "long_description": "Gel dermatológico de pH similar al de la piel, indicado para pieles sensibles y delicadas. Puede utilizarse indistintamente para el cuidado de la piel y el cabello, evitando la resecación, descamación y asegurando una perfecta protección ante posibles contagios de la piel.",
+    "ph": "6 (puro)",
+    "formats": "750ml; 5L"
   },
   {
     "id": "211",
@@ -2111,7 +2441,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1agYhNVF4De8FoFTK0qIPwcsSaS9hCXvu&sz=w1000"
-    ]
+    ],
+    "long_description": "Gel en forma de espuma, adecuado para ser utilizado tanto en la limpieza de la piel como el cabello. Contiene componentes de última generación que le confieren un excelente poder suavizante y reengrasante.",
+    "ph": "5,25 (puro)",
+    "formats": "1L; 5L"
   },
   {
     "id": "212",
@@ -2129,7 +2462,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1eEzNbZ8YElRfO_El5QP-8FXqz988Bs6E&sz=w1000"
-    ]
+    ],
+    "long_description": "Jabón en forma de espuma perfumado. Utilizado en la limpieza de manos. Elimina la suciedad, cuida y suaviza la piel por sus componentes emolientes y reengrasantes. Sin colorantes.",
+    "ph": "5 (puro)",
+    "formats": "1L; 5L"
   },
   {
     "id": "213",
@@ -2147,7 +2483,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1SLIzmqIXc9rn2B1acHFaMQ33jI2W1W45&sz=w1000"
-    ]
+    ],
+    "long_description": "Gel suave para el cuerpo y el cabello, basado en una suave mezcla de tensioactivos, humectantes e ingredientes para el cuidado de la piel. El producto es adecuado para el uso frecuente (no irrita la piel ni la reseca).",
+    "ph": "6 (puro)",
+    "formats": "750ml"
   },
   {
     "id": "214",
@@ -2165,7 +2504,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1Jzr_N0GZbp4JaYponXgIOfvRP3N9xEMd&sz=w1000"
-    ]
+    ],
+    "long_description": "Champú muy suave para el cabello de uso diario, ha sido especialmente formulado con una mezcla de tensioactivos e ingredientes para el cuidado del cuero cabelludo.",
+    "ph": "6 (puro)",
+    "formats": "750ml"
   },
   {
     "id": "215",
@@ -2183,7 +2525,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1ZLFWV1PlIklbs7sE1lqPjKgCxJjMh2Xb&sz=w1000"
-    ]
+    ],
+    "long_description": "Agua de colonia de suave fragancia de notas frescas que proporciona una gran sensación de limpieza, frescor y bienestar en la piel.",
+    "ph": "6 (puro)",
+    "formats": "750ml"
   },
   {
     "id": "216",
@@ -2201,7 +2546,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=17E1OhvqEQEA_QRREdwABtxDTIWGhCw_D&sz=w1000"
-    ]
+    ],
+    "long_description": "Ambientador concentrado de acción instantánea y duradera. Su aroma crea un ambiente agradable, fresco y limpio. Desodoriza y perfuma todo tipo de ambientes.",
+    "ph": "N/A",
+    "formats": "750ml; 5L"
   },
   {
     "id": "217",
@@ -2219,7 +2567,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=100_qSlzbj7C-yEvBR9pY1gwWnix6bfBx&sz=w1000"
-    ]
+    ],
+    "long_description": "Ambientador concentrado de acción instantánea y duradera. Su aroma crea un ambiente agradable, fresco y limpio. Desodoriza y perfuma todo tipo de ambientes.",
+    "ph": "N/A",
+    "formats": "335cc; 750ml; 5L"
   },
   {
     "id": "218",
@@ -2237,7 +2588,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1SrQogeNuduL3ox8GXfCa98ALnwnGXkNK&sz=w1000"
-    ]
+    ],
+    "long_description": "Ambientador concentrado de acción instantánea y duradera. Su aroma crea un ambiente agradable, fresco y limpio. Desodoriza y perfuma todo tipo de ambientes.",
+    "ph": "N/A",
+    "formats": "335cc; 750ml; 5L"
   },
   {
     "id": "219",
@@ -2255,7 +2609,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1wVtuupBxwIg49AlEaooes2_prKnGjXHG&sz=w1000"
-    ]
+    ],
+    "long_description": "Ambientador concentrado de acción instantánea y duradera. Su aroma crea un ambiente agradable, fresco y limpio. Desodoriza y perfuma todo tipo de ambientes.",
+    "ph": "N/A",
+    "formats": "750ml; 5L"
   },
   {
     "id": "220",
@@ -2273,7 +2630,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1jQvxQOwhwDX0qFuG1oK4Ae85Fm5CcyZm&sz=w1000"
-    ]
+    ],
+    "long_description": "Ambientador concentrado de acción instantánea y duradera. Su aroma crea un ambiente agradable, fresco y limpio. Desodoriza y perfuma todo tipo de ambientes.",
+    "ph": "N/A",
+    "formats": "335cc; 750ml; 5L"
   },
   {
     "id": "221",
@@ -2291,7 +2651,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=19lx4mfsCjdVYod7AeajZtYzp95Ko4iKi&sz=w1000"
-    ]
+    ],
+    "long_description": "Ambientador concentrado de acción instantánea y duradera. Su aroma crea un ambiente agradable, fresco y limpio. Desodoriza y perfuma todo tipo de ambientes.",
+    "ph": "N/A",
+    "formats": "335cc; 750ml; 5L"
   },
   {
     "id": "222",
@@ -2309,7 +2672,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=19L6XB5ecFnJxStrSzYv89KYMxoxMY0lS&sz=w1000"
-    ]
+    ],
+    "long_description": "Ambientador concentrado de acción instantánea y duradera. Su aroma crea un ambiente agradable, fresco y limpio. Desodoriza y perfuma todo tipo de ambientes.",
+    "ph": "N/A",
+    "formats": "335cc; 750ml; 5L"
   },
   {
     "id": "223",
@@ -2327,7 +2693,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1yEApnYUEzM_a-JlZYeW_xoGASizUgPEh&sz=w1000"
-    ]
+    ],
+    "long_description": "Ambientador concentrado de acción instantánea y duradera. Su aroma crea un ambiente agradable, fresco y limpio. Desodoriza y perfuma todo tipo de ambientes.",
+    "ph": "N/A",
+    "formats": "335cc; 750ml; 5L"
   },
   {
     "id": "224",
@@ -2345,7 +2714,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1ttvkJj6UfCcdJ3N7q4zPgLNsS_u2yNnk&sz=w1000"
-    ]
+    ],
+    "long_description": "Ambientador concentrado de acción instantánea y duradera. Su aroma crea un ambiente agradable, fresco y limpio. Desodoriza y perfuma todo tipo de ambientes.",
+    "ph": "N/A",
+    "formats": "750ml; 5L"
   },
   {
     "id": "225",
@@ -2363,7 +2735,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1OzpKHWzEJhx7fP-zLdjwZnxwj63Kbb_-&sz=w1000"
-    ]
+    ],
+    "long_description": "Ambientador concentrado de acción instantanea y duradera. Su aroma crea un ambiente agradable, fresco y limpio. Desodoriza y perfuma todo tipo de ambientes.",
+    "ph": "N/A",
+    "formats": "1L; 5L"
   },
   {
     "id": "226",
@@ -2381,7 +2756,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1m6ZOgWhRYTVDbpO6kjDRj-HjCKKzE3qd&sz=w1000"
-    ]
+    ],
+    "long_description": "Ambientador concentrado de acción instantánea y duradera. Su aroma crea un ambiente agradable, fresco y limpio. Desodoriza y perfuma todo tipo de ambientes.",
+    "ph": "N/A",
+    "formats": "1L; 5L"
   },
   {
     "id": "227",
@@ -2399,7 +2777,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1biP3QKur5jP-I2jKa-Sx36CCPz5zh_Ku&sz=w1000"
-    ]
+    ],
+    "long_description": "Insecticida de baja toxicidad indicado para el control de moscas, mosquitos, abejorros, polillas y otros insectos.",
+    "ph": "N/A",
+    "formats": "5L"
   },
   {
     "id": "228",
@@ -2417,7 +2798,10 @@ const products = [
     "hasTechnicalSheet": true,
     "images": [
       "https://drive.google.com/thumbnail?id=1taF6e8zu1COfP4D3nmrj5NxBqA_Xktgm&sz=w1000"
-    ]
+    ],
+    "long_description": "Insecticida de baja toxicidad, formulado para la eliminación de todo tipo de insectos rastreros (arañas, cucarachas, etc.). Posee acción residual, proporcionando periodos más altos de control de los insectos rastreros.",
+    "ph": "N/A",
+    "formats": "5L"
   },
   {
     "id": "229",
@@ -2433,7 +2817,10 @@ const products = [
     "sector": "Limpieza General",
     "images": [
       "https://drive.google.com/thumbnail?id=13BT0IIm6X5yqgSMH3h65riApz3TIVNFl&sz=w1000"
-    ]
+    ],
+    "long_description": "Insecticida de baja toxicidad indicado para el control de moscas, mosquitos, abejorros, y otros insectos. Especialmente indicado para aplicación con dispensador automático.",
+    "ph": "N/A",
+    "formats": "335cc"
   },
   {
     "id": "301",

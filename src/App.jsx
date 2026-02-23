@@ -16,6 +16,7 @@ import RegisterPage from '@/pages/RegisterPage.jsx';
 import CartPage from '@/pages/CartPage.jsx';
 import CheckoutPage from '@/pages/CheckoutPage.jsx';
 import DashboardPage from '@/pages/DashboardPage.jsx';
+import AdminDashboardPage from '@/pages/AdminDashboardPage.jsx';
 import AdminSeedingPage from '@/pages/AdminSeedingPage.jsx';
 import AdminUsersPage from '@/pages/AdminUsersPage.jsx';
 import AdminProductsPage from '@/pages/AdminProductsPage.jsx'; // Nueva página
@@ -66,6 +67,9 @@ const AppContent = () => {
             <Route path="/dashboard" element={<DashboardPage />} />
             
             {/* Rutas de Admin */}
+            <Route path="/admin" element={
+                <AdminRoute><AdminDashboardPage /></AdminRoute>
+            } />
             <Route path="/admin-seed" element={
                 <AdminRoute><AdminSeedingPage /></AdminRoute>
             } />

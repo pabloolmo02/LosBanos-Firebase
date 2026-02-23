@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Menu, X, ShoppingCart, User, Search, FileText, Shield } from 'lucide-react';
+import { Menu, X, ShoppingCart, User, Search, FileText, Shield, ChevronDown } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
 import { Button } from '@/components/ui/button';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [adminMenuOpen, setAdminMenuOpen] = useState(false);
   const { user, logout, isAuthenticated } = useAuth();
   const navigate = useNavigate();
 
@@ -54,12 +55,30 @@ const Header = () => {
             {isAuthenticated ? (
               <>
                 {isAdmin && (
-                    <Button variant="ghost" size="sm" asChild className="text-purple-700 hover:text-purple-900 hover:bg-purple-100 mr-1">
-                        <Link to="/admin-users" className="flex items-center">
-                            <Shield className="h-4 w-4 mr-1" />
-                            Admin
-                        </Link>
+                  <div className="relative group">
+                    <Button variant="ghost" size="sm" className="text-purple-700 hover:text-purple-900 hover:bg-purple-100 flex items-center">
+                      <Shield className="h-4 w-4 mr-1" />
+                      Admin
+                      <ChevronDown className="h-4 w-4 ml-1" />
                     </Button>
+                    
+                    {/* Desktop Dropdown */}
+                    <div className="hidden group-hover:block absolute right-0 mt-0 w-52 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
+                      <Link to="/admin" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-700 font-semibold">
+                        📋 Panel Principal
+                      </Link>
+                      <hr className="my-1" />
+                      <Link to="/admin-products" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-700">
+                        📦 Gestionar Productos
+                      </Link>
+                      <Link to="/admin-users" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-700">
+                        👥 Gestionar Usuarios
+                      </Link>
+                      <Link to="/admin-seed" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-700">
+                        🌱 Seeding de Datos
+                      </Link>
+                    </div>
+                  </div>
                 )}
 
                 <Button variant="ghost" size="icon" asChild className="text-brand-dark hover:text-brand-blue hover:bg-brand-base/20">
@@ -119,9 +138,21 @@ const Header = () => {
                 Ventajas
               </Link>
               {isAdmin && (
-                  <Link to="/admin-users" className="text-purple-700 hover:text-purple-900 font-semibold py-2 px-3 rounded-lg hover:bg-purple-100 transition-all" onClick={() => setMobileMenuOpen(false)}>
-                    Administración Usuarios
+                <>
+                  <div className="border-t border-gray-200 my-2"></div>
+                  <Link to="/admin" className="text-purple-700 hover:text-purple-900 font-semibold py-2 px-3 rounded-lg hover:bg-purple-100 transition-all flex items-center" onClick={() => setMobileMenuOpen(false)}>
+                    📋 Panel Principal Admin
                   </Link>
+                  <Link to="/admin-products" className="text-purple-700 hover:text-purple-900 font-semibold py-2 px-3 rounded-lg hover:bg-purple-100 transition-all flex items-center" onClick={() => setMobileMenuOpen(false)}>
+                    📦 Gestionar Productos
+                  </Link>
+                  <Link to="/admin-users" className="text-purple-700 hover:text-purple-900 font-semibold py-2 px-3 rounded-lg hover:bg-purple-100 transition-all flex items-center" onClick={() => setMobileMenuOpen(false)}>
+                    👥 Gestionar Usuarios
+                  </Link>
+                  <Link to="/admin-seed" className="text-purple-700 hover:text-purple-900 font-semibold py-2 px-3 rounded-lg hover:bg-purple-100 transition-all flex items-center" onClick={() => setMobileMenuOpen(false)}>
+                    🌱 Seeding de Datos
+                  </Link>
+                </>
               )}
               {isAuthenticated ? (
                 <>

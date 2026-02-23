@@ -9,6 +9,12 @@ import { Button } from '@/components/ui/button';
 import { useToast } from "@/components/ui/use-toast"
 import { addToCart } from '@/lib/cart';
 
+const isUsableImage = (img) => (
+  typeof img === 'string' &&
+  img.trim().length > 0 &&
+  !img.startsWith('gs://')
+);
+
 // Helper component for pH indicator
 const PhIndicator = ({ phString }) => {
     if (!phString) return null;
@@ -52,31 +58,59 @@ const ProductDetailPage = () => {
   const { id } = useParams();
   const location = useLocation();
   const [product, setProduct] = useState(null);
-  const [selectedVariant, setSelectedVariant] = useState(null);
+  const [selectedFormat, setSelectedFormat] = useState(null);
   const [loading, setLoading] = useState(true);
   const { isApproved } = useAuth();
   const { toast } = useToast();
+
+  const availableFormats = React.useMemo(() => {
+    if (!product?.formats) return [];
+
+    const productImages = Array.isArray(product.images) ? product.images : [product.images];
+    const fallbackImage = productImages.find((img) => isUsableImage(img)) || null;
+    
+    if (Array.isArray(product.formats)) {
+      return product.formats
+        .filter((f) => f && (typeof f === 'object' ? f.name : f))
+        .map((f) => {
+          if (typeof f === 'string') {
+            return {
+              name: f,
+              price: Number(product.price) || 0,
+              image: fallbackImage
+            };
+          }
+          return {
+            name: f.name,
+            price: Number(f.price) || Number(product.price) || 0,
+            image: fallbackImage || (isUsableImage(f.image) ? f.image : null)
+          };
+        });
+    }
+    return String(product.formats)
+      .split(/;|,/g)
+      .map((f) => f.trim())
+      .filter(Boolean)
+      .map((name) => ({
+        name,
+        price: Number(product.price) || 0,
+        image: fallbackImage
+      }));
+  }, [product?.formats, product?.price, product?.images]);
 
   const backLink = location.state?.fromCategory 
       ? `/productos?cat=${location.state.fromCategory}` 
       : '/productos';
 
   useEffect(() => {
+    // Scroll to top al entrar en el producto
+    window.scrollTo(0, 0);
+    
     const fetchProduct = async () => {
       setLoading(true);
       try {
         const fetchedProduct = await getProductById(id);
         setProduct(fetchedProduct);
-        
-        if (fetchedProduct && fetchedProduct.variants && fetchedProduct.variants.length > 0) {
-           setSelectedVariant(fetchedProduct.variants[0]);
-        } else if (fetchedProduct) {
-           setSelectedVariant({ 
-               id: fetchedProduct.id, 
-               format: 'Estándar', 
-               price: fetchedProduct.price 
-           });
-        }
       } catch (error) {
         console.error("Error fetching product:", error);
       }
@@ -84,14 +118,21 @@ const ProductDetailPage = () => {
     };
     fetchProduct();
   }, [id]);
+
+  // Set default format when product loads or formats change
+  useEffect(() => {
+    if (availableFormats.length > 0 && !selectedFormat) {
+      setSelectedFormat(availableFormats[0]);
+    }
+  }, [availableFormats, selectedFormat]);
   
   const handleAddToCart = () => {
-    if (!product || !selectedVariant) return;
+    if (!product || !selectedFormat) return;
     
     const itemToAdd = {
-      ...product, 
-      price: selectedVariant.price, 
-      variant: selectedVariant 
+      ...product,
+      selectedFormat: selectedFormat.name,
+      price: Number(selectedFormat.price)
     };
     
     addToCart(itemToAdd);
@@ -103,7 +144,7 @@ const ProductDetailPage = () => {
           <span>Añadido al carrito</span>
         </div>
       ),
-      description: `${product.name} - ${selectedVariant.format} añadido.`,
+      description: `${product.name} (${selectedFormat.name}) - ${Number(selectedFormat.price).toFixed(2)}€`,
     });
   };
 
@@ -128,19 +169,34 @@ const ProductDetailPage = () => {
           <div className="grid lg:grid-cols-2 gap-12 bg-white p-8 rounded-2xl shadow-sm border">
             {/* Image Gallery */}
             <div className="flex items-center justify-center p-4 rounded-xl bg-cover bg-center" style={{ backgroundImage: "url('/images/ProductBackground.PNG')" }}>
-                {product.images && product.images.length > 0 ? (
-                    <img src={product.images[0]} alt={product.name} className="max-w-full h-auto max-h-[400px] object-contain"/>
-                ) : (
-                    <div className="w-full h-[400px] flex items-center justify-center text-slate-400 rounded-lg">
-                        <div className="text-center">
-                            <span className="block text-6xl mb-2 opacity-50">🧴</span>
-                            <span className="text-sm uppercase font-medium">Sin imagen</span>
-                        </div>
+                {(() => {
+                  const productImages = Array.isArray(product.images) ? product.images : [product.images];
+                  const primaryFromProduct = productImages.find((img) => isUsableImage(img)) || null;
+                  const primaryFromFormat = isUsableImage(selectedFormat?.image) ? selectedFormat.image : null;
+                  const primaryImage = primaryFromProduct || primaryFromFormat;
+
+                  return primaryImage ? (
+                    <img
+                      src={primaryImage}
+                      alt={product.name}
+                      className="max-w-full h-auto max-h-[400px] object-contain"
+                      onError={(event) => {
+                        event.currentTarget.style.display = 'none';
+                        const placeholder = event.currentTarget.nextElementSibling;
+                        if (placeholder) placeholder.style.display = 'flex';
+                      }}
+                    />
+                  ) : null;
+                })()}
+                <div className="w-full h-[400px] flex items-center justify-center text-slate-400 rounded-lg" style={{ display: 'none' }}>
+                    <div className="text-center">
+                        <span className="block text-6xl mb-2 opacity-50">🧴</span>
+                        <span className="text-sm uppercase font-medium">Sin imagen</span>
                     </div>
-                )}
+                </div>
             </div>
 
-            {/* Product Details */}
+            {/* Product Details */}            {/* Product Details */}
             <div>
               <span className="text-xs font-semibold text-blue-600 uppercase tracking-wider">{product.reference}</span>
               <h1 className="text-4xl font-bold text-slate-800 mt-2 mb-4">{product.name}</h1>
@@ -152,51 +208,55 @@ const ProductDetailPage = () => {
 
               {/* pH Indicator */}
               {product.ph && <PhIndicator phString={product.ph} />}
-              
-              {/* Variant Selector */}
-              {product.variants && product.variants.length > 1 && (
-                  <div className="mb-6">
-                      <label className="block text-sm font-medium text-slate-700 mb-2">Seleccionar Formato:</label>
-                      <div className="flex flex-wrap gap-3">
-                          {product.variants.map((v) => (
-                              <button
-                                  key={v.id}
-                                  onClick={() => setSelectedVariant(v)}
-                                  className={`px-4 py-2 border rounded-md text-sm font-medium transition-all ${
-                                      selectedVariant?.id === v.id
-                                          ? 'border-blue-600 bg-blue-50 text-blue-700 ring-1 ring-blue-600'
-                                          : 'border-slate-200 text-slate-600 hover:border-slate-300 hover:bg-slate-50'
-                                  }`}
-                              >
-                                  {v.format}
-                              </button>
-                          ))}
-                      </div>
-                  </div>
-              )}
-              
-              {/* Single Variant Info */}
-              {product.variants && product.variants.length === 1 && product.variants[0].format !== 'Estándar' && (
-                  <div className="mb-6">
-                      <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-800">
-                          Formato: {product.variants[0].format}
-                      </span>
-                  </div>
-              )}
 
-              <div className="bg-slate-50 rounded-xl p-6 border border-slate-200">
-                <div className="flex items-center justify-between">
-                  {isApproved && selectedVariant ? (
-                      <div>
-                          <span className="text-4xl font-extrabold text-slate-900">{selectedVariant.price.toFixed(2)}€</span>
-                          <span className="block text-xs text-slate-500 mt-1">Precio por unidad (sin IVA)</span>
+              {availableFormats.length > 0 && (
+                <div className="mb-6">
+                  <label className="block text-sm font-medium text-slate-700 mb-3">Formatos disponibles:</label>
+                  <div className="flex flex-wrap gap-2">
+                    {availableFormats.map((format, index) => (
+                      <button
+                        key={`${format.name}-${index}`}
+                        onClick={() => setSelectedFormat(format)}
+                        className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 ${
+                          selectedFormat?.name === format.name
+                            ? 'bg-blue-600 text-white shadow-md scale-105'
+                            : 'bg-slate-100 text-slate-700 hover:bg-slate-200 hover:scale-105'
+                        }`}
+                      >
+                        {format.name}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+              
+              
+
+              <div className="bg-slate-50 rounded-xl p-4 md:p-6 border border-slate-200">
+                <div className="flex items-center justify-between gap-3">
+                  {isApproved && selectedFormat?.price !== undefined ? (
+                      <div className="flex-shrink">
+                          <span className="text-2xl md:text-4xl font-extrabold text-slate-900">
+                            {Number(selectedFormat.price).toFixed(2)}€
+                          </span>
+                          <span className="block text-xs text-slate-500 mt-1">
+                            <span className="hidden sm:inline">Precio por unidad (sin IVA)</span>
+                            <span className="sm:hidden">Sin IVA</span>
+                            {selectedFormat.name && ` - ${selectedFormat.name}`}
+                          </span>
                       </div>
                   ) : (
-                    <span className="text-lg text-slate-500">Inicia sesión para ver precios</span>
+                    <span className="text-sm md:text-lg text-slate-500">Inicia sesión para ver precios</span>
                   )}
                   {isApproved && (
-                    <Button size="lg" onClick={handleAddToCart} disabled={!selectedVariant}>
-                      <ShoppingCart className="h-5 w-5 mr-2" /> Añadir al Carrito
+                    <Button 
+                      size="lg" 
+                      onClick={handleAddToCart} 
+                      disabled={!selectedFormat?.price && selectedFormat?.price !== 0}
+                      className="flex-shrink-0"
+                    >
+                      <ShoppingCart className="h-5 w-5 md:mr-2" />
+                      <span className="hidden md:inline">Añadir al Carrito</span>
                     </Button>
                   )}
                 </div>
