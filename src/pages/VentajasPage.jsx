@@ -3,6 +3,8 @@ import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import { Award, Shield, TrendingUp, FileCheck, Download, CheckCircle, XCircle, Briefcase, Scale, DollarSign } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import EditableText from '@/components/editable/EditableText';
+import EditableImage from '@/components/editable/EditableImage';
 
 const VentajasPage = () => {
   const compareData = [
@@ -61,14 +63,18 @@ const VentajasPage = () => {
               transition={{ duration: 0.8 }}
               className="max-w-3xl"
             >
-              <h1 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-                Ventajas Competitivas para<br/>
-                <span className="text-blue-300">Nuestros Partners</span>
-              </h1>
-              <p className="text-xl text-blue-100 max-w-2xl leading-relaxed">
-                Más allá de productos de calidad, te ofrecemos herramientas estratégicas que 
-                impulsan tu negocio: acceso a licitaciones, ahorro fiscal y compliance garantizado.
-              </p>
+              <EditableText
+                as="h1"
+                className="text-4xl lg:text-5xl font-bold mb-6 leading-tight"
+                contentKey="advantages.hero.title"
+                fallback="Ventajas Competitivas para Nuestros Partners"
+              />
+              <EditableText
+                as="p"
+                className="text-xl text-blue-100 max-w-2xl leading-relaxed"
+                contentKey="advantages.hero.subtitle"
+                fallback="Más allá de productos de calidad, te ofrecemos herramientas estratégicas que impulsan tu negocio: acceso a licitaciones, ahorro fiscal y compliance garantizado."
+              />
             </motion.div>
           </div>
         </div>
@@ -84,12 +90,19 @@ const VentajasPage = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl lg:text-4xl font-bold mb-4" style={{ color: '#1b1847' }}>
-                Tres Pilares que Transforman tu Negocio
-              </h2>
-              <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-                Elegir productos certificados no es solo calidad, es estrategia comercial inteligente
-              </p>
+              <EditableText
+                as="h2"
+                className="text-3xl lg:text-4xl font-bold mb-4"
+                style={{ color: '#1b1847' }}
+                contentKey="advantages.pillars.title"
+                fallback="Tres Pilares que Transforman tu Negocio"
+              />
+              <EditableText
+                as="p"
+                className="text-lg text-slate-600 max-w-3xl mx-auto"
+                contentKey="advantages.pillars.subtitle"
+                fallback="Elegir productos certificados no es solo calidad, es estrategia comercial inteligente"
+              />
             </motion.div>
 
             <div className="grid md:grid-cols-3 gap-8">
@@ -105,22 +118,33 @@ const VentajasPage = () => {
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-50 rounded-full flex-shrink-0">
                     <Scale className="h-8 w-8" style={{ color: '#15277a' }} />
                   </div>
-                  <h3 className="text-2xl font-bold" style={{ color: '#1b1847' }}>
-                    Pasaporte para Licitaciones Públicas
-                  </h3>
+                  <EditableText
+                    as="h3"
+                    className="text-2xl font-bold"
+                    style={{ color: '#1b1847' }}
+                    contentKey="advantages.pillars.0.title"
+                    fallback="Pasaporte para Licitaciones Públicas"
+                  />
                 </div>
-                <p className="text-slate-700 mb-4">
-                  Al usar nuestros productos con <strong>Ecolabel</strong> e <strong>ISO 14001</strong>, 
-                  tu empresa cumple automáticamente con las cláusulas ambientales de los pliegos de 
-                  contratación pública.
-                </p>
+                <EditableText
+                  as="p"
+                  className="text-slate-700 mb-4"
+                  contentKey="advantages.pillars.0.body"
+                  fallback="Al usar nuestros productos con Ecolabel e ISO 14001, tu empresa cumple automáticamente con las cláusulas ambientales de los pliegos de contratación pública."
+                />
                 <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
-                  <p className="text-sm font-semibold text-green-800">
-                    ✓ Suma puntos clave para ganar concursos del Estado
-                  </p>
-                  <p className="text-sm text-green-700 mt-1">
-                    Cumplimiento Ley de Contratos del Sector Público
-                  </p>
+                  <EditableText
+                    as="p"
+                    className="text-sm font-semibold text-green-800"
+                    contentKey="advantages.pillars.0.callout.title"
+                    fallback="✓ Suma puntos clave para ganar concursos del Estado"
+                  />
+                  <EditableText
+                    as="p"
+                    className="text-sm text-green-700 mt-1"
+                    contentKey="advantages.pillars.0.callout.body"
+                    fallback="Cumplimiento Ley de Contratos del Sector Público"
+                  />
                 </div>
               </motion.div>
 
@@ -136,22 +160,33 @@ const VentajasPage = () => {
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-50 rounded-full flex-shrink-0">
                     <DollarSign className="h-8 w-8" style={{ color: '#15277a' }} />
                   </div>
-                  <h3 className="text-2xl font-bold" style={{ color: '#1b1847' }}>
-                    Beneficios Fiscales y Deducciones
-                  </h3>
+                  <EditableText
+                    as="h3"
+                    className="text-2xl font-bold"
+                    style={{ color: '#1b1847' }}
+                    contentKey="advantages.pillars.1.title"
+                    fallback="Beneficios Fiscales y Deducciones"
+                  />
                 </div>
-                <p className="text-slate-700 mb-4">
-                  La inversión en productos certificados puede vincularse a proyectos de mejora 
-                  ambiental, permitiendo acceder a <strong>deducciones en el Impuesto de Sociedades</strong> 
-                  y bonificaciones por gestión de residuos.
-                </p>
+                <EditableText
+                  as="p"
+                  className="text-slate-700 mb-4"
+                  contentKey="advantages.pillars.1.body"
+                  fallback="La inversión en productos certificados puede vincularse a proyectos de mejora ambiental, permitiendo acceder a deducciones en el Impuesto de Sociedades y bonificaciones por gestión de residuos."
+                />
                 <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
-                  <p className="text-sm font-semibold text-green-800">
-                    ✓ Inversión deducible, no gasto
-                  </p>
-                  <p className="text-sm text-green-700 mt-1">
-                    Optimiza tu fiscalidad empresarial
-                  </p>
+                  <EditableText
+                    as="p"
+                    className="text-sm font-semibold text-green-800"
+                    contentKey="advantages.pillars.1.callout.title"
+                    fallback="✓ Inversión deducible, no gasto"
+                  />
+                  <EditableText
+                    as="p"
+                    className="text-sm text-green-700 mt-1"
+                    contentKey="advantages.pillars.1.callout.body"
+                    fallback="Optimiza tu fiscalidad empresarial"
+                  />
                 </div>
               </motion.div>
 
@@ -167,22 +202,33 @@ const VentajasPage = () => {
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-50 rounded-full flex-shrink-0">
                     <Shield className="h-8 w-8" style={{ color: '#15277a' }} />
                   </div>
-                  <h3 className="text-2xl font-bold" style={{ color: '#1b1847' }}>
-                    Cumplimiento Normativo (Compliance)
-                  </h3>
+                  <EditableText
+                    as="h3"
+                    className="text-2xl font-bold"
+                    style={{ color: '#1b1847' }}
+                    contentKey="advantages.pillars.2.title"
+                    fallback="Cumplimiento Normativo (Compliance)"
+                  />
                 </div>
-                <p className="text-slate-700 mb-4">
-                  Todos nuestros productos cuentan con <strong>registro sanitario</strong> y 
-                  <strong> certificación AEMPS</strong>, garantizando que tu empresa cumple con 
-                  las normativas de seguridad laboral y salud pública desde el primer día.
-                </p>
+                <EditableText
+                  as="p"
+                  className="text-slate-700 mb-4"
+                  contentKey="advantages.pillars.2.body"
+                  fallback="Todos nuestros productos cuentan con registro sanitario y certificación AEMPS, garantizando que tu empresa cumple con las normativas de seguridad laboral y salud pública desde el primer día."
+                />
                 <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
-                  <p className="text-sm font-semibold text-green-800">
-                    ✓ Cero riesgos legales
-                  </p>
-                  <p className="text-sm text-green-700 mt-1">
-                    Evita sanciones y auditorías fallidas
-                  </p>
+                  <EditableText
+                    as="p"
+                    className="text-sm font-semibold text-green-800"
+                    contentKey="advantages.pillars.2.callout.title"
+                    fallback="✓ Cero riesgos legales"
+                  />
+                  <EditableText
+                    as="p"
+                    className="text-sm text-green-700 mt-1"
+                    contentKey="advantages.pillars.2.callout.body"
+                    fallback="Evita sanciones y auditorías fallidas"
+                  />
                 </div>
               </motion.div>
             </div>
@@ -197,12 +243,19 @@ const VentajasPage = () => {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl lg:text-4xl font-bold mb-4" style={{ color: '#1b1847' }}>
-                ¿Por Qué Elegir Productos Certificados?
-              </h2>
-              <p className="text-lg text-slate-600">
-                La diferencia entre un proveedor convencional y un socio estratégico
-              </p>
+              <EditableText
+                as="h2"
+                className="text-3xl lg:text-4xl font-bold mb-4"
+                style={{ color: '#1b1847' }}
+                contentKey="advantages.compare.title"
+                fallback="¿Por Qué Elegir Productos Certificados?"
+              />
+              <EditableText
+                as="p"
+                className="text-lg text-slate-600"
+                contentKey="advantages.compare.subtitle"
+                fallback="La diferencia entre un proveedor convencional y un socio estratégico"
+              />
             </motion.div>
 
             <motion.div
@@ -217,13 +270,13 @@ const VentajasPage = () => {
                   <thead>
                     <tr className="bg-gradient-to-r from-slate-100 to-slate-50">
                       <th className="px-6 py-4 text-left font-bold" style={{ color: '#1b1847' }}>
-                        Factor Clave
+                        <EditableText as="span" contentKey="advantages.compare.headers.factor" fallback="Factor Clave" />
                       </th>
                       <th className="px-6 py-4 text-center font-bold text-slate-600">
-                        Proveedor Convencional
+                        <EditableText as="span" contentKey="advantages.compare.headers.conventional" fallback="Proveedor Convencional" />
                       </th>
                       <th className="px-6 py-4 text-center font-bold" style={{ color: '#15277a' }}>
-                        Tu Empresa (Certificada)
+                        <EditableText as="span" contentKey="advantages.compare.headers.certified" fallback="Tu Empresa (Certificada)" />
                       </th>
                     </tr>
                   </thead>
@@ -234,18 +287,18 @@ const VentajasPage = () => {
                         className={`border-t ${index % 2 === 0 ? 'bg-white' : 'bg-slate-50'} hover:bg-blue-50/30 transition-colors`}
                       >
                         <td className="px-6 py-4 font-semibold text-slate-800">
-                          {row.factor}
+                          <EditableText as="span" contentKey={`advantages.compare.rows.${index}.factor`} fallback={row.factor} />
                         </td>
                         <td className="px-6 py-4 text-center">
                           <div className="flex items-center justify-center gap-2">
                             <XCircle className="h-5 w-5 text-red-500 flex-shrink-0" />
-                            <span className="text-slate-600">{row.convencional}</span>
+                            <EditableText as="span" className="text-slate-600" contentKey={`advantages.compare.rows.${index}.conventional`} fallback={row.convencional} />
                           </div>
                         </td>
                         <td className="px-6 py-4 text-center">
                           <div className="flex items-center justify-center gap-2">
                             <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                            <span className="font-medium" style={{ color: '#15277a' }}>{row.certificado}</span>
+                            <EditableText as="span" className="font-medium" style={{ color: '#15277a' }} contentKey={`advantages.compare.rows.${index}.certified`} fallback={row.certificado} />
                           </div>
                         </td>
                       </tr>
@@ -270,29 +323,35 @@ const VentajasPage = () => {
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-white/10 rounded-full flex-shrink-0">
                     <Download className="h-8 w-8 text-blue-200" />
                   </div>
-                  <h2 className="text-3xl font-bold">Documentación y Certificaciones</h2>
+                  <EditableText
+                    as="h2"
+                    className="text-3xl font-bold"
+                    contentKey="advantages.docs.title"
+                    fallback="Documentación y Certificaciones"
+                  />
                 </div>
-                <p className="text-lg text-blue-100 mb-6">
-                  Descarga aquí los certificados para tu próxima auditoría o licitación. 
-                  Con un clic, tendrás todos los documentos necesarios para demostrar tu 
-                  cumplimiento normativo.
-                </p>
+                <EditableText
+                  as="p"
+                  className="text-lg text-blue-100 mb-6"
+                  contentKey="advantages.docs.description"
+                  fallback="Descarga aquí los certificados para tu próxima auditoría o licitación. Con un clic, tendrás todos los documentos necesarios para demostrar tu cumplimiento normativo."
+                />
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center gap-3">
                     <FileCheck className="h-5 w-5 text-green-400" />
-                    <span>Certificados ISO 9001 / 14001</span>
+                    <EditableText as="span" contentKey="advantages.docs.items.0" fallback="Certificados ISO 9001 / 14001" />
                   </li>
                   <li className="flex items-center gap-3">
                     <FileCheck className="h-5 w-5 text-green-400" />
-                    <span>Fichas de registro AEMPS</span>
+                    <EditableText as="span" contentKey="advantages.docs.items.1" fallback="Fichas de registro AEMPS" />
                   </li>
                   <li className="flex items-center gap-3">
                     <FileCheck className="h-5 w-5 text-green-400" />
-                    <span>Etiquetas Ecolabel oficiales</span>
+                    <EditableText as="span" contentKey="advantages.docs.items.2" fallback="Etiquetas Ecolabel oficiales" />
                   </li>
                   <li className="flex items-center gap-3">
                     <FileCheck className="h-5 w-5 text-green-400" />
-                    <span>Fichas de Datos de Seguridad (FDS)</span>
+                    <EditableText as="span" contentKey="advantages.docs.items.3" fallback="Fichas de Datos de Seguridad (FDS)" />
                   </li>
                 </ul>
                 <Button 
@@ -302,7 +361,7 @@ const VentajasPage = () => {
                 >
                   <a href="/documentacion">
                     <Download className="mr-2 h-5 w-5" />
-                    Documentación y Certificaciones
+                    <EditableText as="span" contentKey="advantages.docs.cta" fallback="Documentación y Certificaciones" />
                   </a>
                 </Button>
               </div>
@@ -310,11 +369,12 @@ const VentajasPage = () => {
                 <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20">
                   <div className="text-center">
                     <Briefcase className="h-20 w-20 mx-auto text-blue-200 mb-4" />
-                    <p className="text-sm text-blue-100">
-                      <strong className="text-white text-lg block mb-2">"Ahorra horas de trabajo"</strong>
-                      Todo lo que necesitas para presentar en tu auditoría, 
-                      licitación o certificación ESG, en un solo lugar.
-                    </p>
+                    <EditableText
+                      as="p"
+                      className="text-sm text-blue-100"
+                      contentKey="advantages.docs.card"
+                      fallback="Ahorra horas de trabajo. Todo lo que necesitas para presentar en tu auditoría, licitación o certificación ESG, en un solo lugar."
+                    />
                   </div>
                 </div>
               </div>
@@ -333,51 +393,52 @@ const VentajasPage = () => {
               <div className="p-8 lg:p-12 flex flex-col justify-center">
                 <div className="flex items-center space-x-3 mb-6">
                   <TrendingUp className="h-8 w-8" style={{ color: '#059669' }} />
-                  <h2 className="text-3xl font-bold" style={{ color: '#1b1847' }}>
-                    Sostenibilidad Rentable
-                  </h2>
+                  <EditableText
+                    as="h2"
+                    className="text-3xl font-bold"
+                    style={{ color: '#1b1847' }}
+                    contentKey="advantages.sustainability.title"
+                    fallback="Sostenibilidad Rentable"
+                  />
                 </div>
                 <div className="prose text-slate-700">
-                  <p className="mb-6 text-lg">
-                    No hablamos solo de "salvar el planeta". Hablamos de <strong>Eficiencia Operativa </strong> 
-                    que impacta directamente en tus resultados.
-                  </p>
+                  <EditableText
+                    as="p"
+                    className="mb-6 text-lg"
+                    contentKey="advantages.sustainability.description"
+                    fallback="No hablamos solo de salvar el planeta. Hablamos de eficiencia operativa que impacta directamente en tus resultados."
+                  />
                   <div className="space-y-4">
                     <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
-                      <h4 className="font-bold text-green-900 mb-2">Menos Fallos = Más Ahorro</h4>
-                      <p className="text-sm text-green-800">
-                        Un producto ISO 9001 garantiza menos fallos, lo que significa menos devoluciones 
-                        y menos pérdida de tiempo para tu equipo.
-                      </p>
+                      <EditableText as="h4" className="font-bold text-green-900 mb-2" contentKey="advantages.sustainability.blocks.0.title" fallback="Menos Fallos = Más Ahorro" />
+                      <EditableText as="p" className="text-sm text-green-800" contentKey="advantages.sustainability.blocks.0.body" fallback="Un producto ISO 9001 garantiza menos fallos, lo que significa menos devoluciones y menos pérdida de tiempo para tu equipo." />
                     </div>
                     <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
-                      <h4 className="font-bold text-blue-900 mb-2">Control de Costes Exacto</h4>
-                      <p className="text-sm text-blue-800">
-                        Sistemas de dosificación que evitan mermas y garantizan el coste por uso, 
-                        sin sorpresas en el inventario.
-                      </p>
+                      <EditableText as="h4" className="font-bold text-blue-900 mb-2" contentKey="advantages.sustainability.blocks.1.title" fallback="Control de Costes Exacto" />
+                      <EditableText as="p" className="text-sm text-blue-800" contentKey="advantages.sustainability.blocks.1.body" fallback="Sistemas de dosificación que evitan mermas y garantizan el coste por uso, sin sorpresas en el inventario." />
                     </div>
                     <div className="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
-                      <h4 className="font-bold text-purple-900 mb-2">Imagen Corporativa Premium</h4>
-                      <p className="text-sm text-purple-800">
-                        Cumplir con estándares ESG mejora tu reputación ante inversores, 
-                        clientes y empleados. La sostenibilidad vende.
-                      </p>
+                      <EditableText as="h4" className="font-bold text-purple-900 mb-2" contentKey="advantages.sustainability.blocks.2.title" fallback="Imagen Corporativa Premium" />
+                      <EditableText as="p" className="text-sm text-purple-800" contentKey="advantages.sustainability.blocks.2.body" fallback="Cumplir con estándares ESG mejora tu reputación ante inversores, clientes y empleados. La sostenibilidad vende." />
                     </div>
                   </div>
                 </div>
               </div>
               <div className="bg-slate-100 relative min-h-[300px] lg:min-h-full">
-                <img 
-                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80" 
+                <EditableImage
+                  contentKey="advantages.sustainability.image"
+                  fallback="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80"
                   alt="Eficiencia y sostenibilidad"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-green-900/60 to-transparent"></div>
                 <div className="absolute bottom-8 left-8 right-8 text-white">
-                  <p className="text-2xl font-bold">
-                    Invierte en calidad, cosecha en eficiencia.
-                  </p>
+                  <EditableText
+                    as="p"
+                    className="text-2xl font-bold"
+                    contentKey="advantages.sustainability.caption"
+                    fallback="Invierte en calidad, cosecha en eficiencia."
+                  />
                 </div>
               </div>
             </div>

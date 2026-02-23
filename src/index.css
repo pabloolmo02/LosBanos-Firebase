@@ -40,7 +40,12 @@
   body {
     @apply bg-background text-foreground;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    overflow-x: hidden;
   }
+}
+
+#root {
+  overflow-x: hidden;
 }
 
 @layer utilities {
@@ -49,5 +54,14 @@
   }
   .font-logo {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .edit-mode [data-editable="true"] {
+    outline: 1px dashed #44aaff;
+    outline-offset: 2px;
+    cursor: text;
+  }
+  .edit-mode [data-editable="true"]:hover {
+    outline: 1px solid #44aaff;
+    background-color: rgba(68, 170, 255, 0.08);
   }
 }

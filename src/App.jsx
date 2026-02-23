@@ -3,6 +3,8 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Toaster } from '@/components/ui/toaster';
 import { AuthProvider, useAuth } from '@/contexts/AuthContext';
+import { ContentProvider } from '@/contexts/ContentContext';
+import { EditModeProvider } from '@/contexts/EditModeContext';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import HomePage from '@/pages/HomePage';
@@ -17,9 +19,9 @@ import CartPage from '@/pages/CartPage.jsx';
 import CheckoutPage from '@/pages/CheckoutPage.jsx';
 import DashboardPage from '@/pages/DashboardPage.jsx';
 import AdminDashboardPage from '@/pages/AdminDashboardPage.jsx';
-import AdminSeedingPage from '@/pages/AdminSeedingPage.jsx';
 import AdminUsersPage from '@/pages/AdminUsersPage.jsx';
 import AdminProductsPage from '@/pages/AdminProductsPage.jsx'; // Nueva página
+import AdminOrdersPage from '@/pages/AdminOrdersPage.jsx';
 
 // Componente Wrapper para rutas protegidas de Admin
 const AdminRoute = ({ children }) => {
@@ -70,14 +72,14 @@ const AppContent = () => {
             <Route path="/admin" element={
                 <AdminRoute><AdminDashboardPage /></AdminRoute>
             } />
-            <Route path="/admin-seed" element={
-                <AdminRoute><AdminSeedingPage /></AdminRoute>
-            } />
             <Route path="/admin-users" element={
                 <AdminRoute><AdminUsersPage /></AdminRoute>
             } />
             <Route path="/admin-products" element={
                 <AdminRoute><AdminProductsPage /></AdminRoute>
+            } />
+            <Route path="/admin-orders" element={
+              <AdminRoute><AdminOrdersPage /></AdminRoute>
             } />
           </Routes>
         </main>
@@ -91,7 +93,11 @@ const AppContent = () => {
 function App() {
   return (
     <AuthProvider>
-      <AppContent />
+      <ContentProvider>
+        <EditModeProvider>
+          <AppContent />
+        </EditModeProvider>
+      </ContentProvider>
     </AuthProvider>
   );
 }

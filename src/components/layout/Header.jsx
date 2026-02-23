@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Menu, X, ShoppingCart, User, Search, FileText, Shield, ChevronDown } from 'lucide-react';
+import { Menu, X, ShoppingCart, User, Search, FileText, Shield, ChevronDown, Pencil } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
+import { useEditMode } from '@/contexts/EditModeContext';
 import { Button } from '@/components/ui/button';
 import { motion, AnimatePresence } from 'framer-motion';
+import EditableNavLink from '@/components/editable/EditableNavLink';
 
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [adminMenuOpen, setAdminMenuOpen] = useState(false);
   const { user, logout, isAuthenticated } = useAuth();
+  const { enabled: isEditMode, isDesktop, toggle: toggleEditMode } = useEditMode();
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -18,6 +21,13 @@ const Header = () => {
   };
 
   const isAdmin = user?.role === 'admin';
+  const navItems = [
+    { key: 'home', label: 'Inicio', href: '/' },
+    { key: 'products', label: 'Productos', href: '/productos' },
+    { key: 'company', label: 'Empresa', href: '/empresa' },
+    { key: 'advantages', label: 'Ventajas', href: '/ventajas' },
+    { key: 'docs', label: 'Documentación', href: '/documentacion' }
+  ];
 
   return (
     <header className="shadow-md sticky top-0 z-50 bg-white border-b border-brand-base/30">
@@ -28,21 +38,16 @@ const Header = () => {
           </Link>
 
           <nav className="hidden xl:flex items-center space-x-8">
-             <Link to="/" className="text-brand-dark hover:text-brand-blue font-semibold transition-colors text-sm tracking-wide">
-              Inicio
-            </Link>
-            <Link to="/productos" className="text-brand-dark hover:text-brand-blue font-semibold transition-colors text-sm tracking-wide">
-              Productos
-            </Link>
-             <Link to="/empresa" className="text-brand-dark hover:text-brand-blue font-semibold transition-colors text-sm tracking-wide">
-              Empresa
-            </Link>
-            <Link to="/ventajas" className="text-brand-dark hover:text-brand-blue font-semibold transition-colors text-sm tracking-wide">
-              Ventajas
-            </Link>
-            <Link to="/documentacion" className="text-brand-dark hover:text-brand-blue font-semibold transition-colors text-sm tracking-wide">
-              Documentación
-            </Link>
+            {navItems.map((item) => (
+              <EditableNavLink
+                key={item.key}
+                contentKeyLabel={`nav.${item.key}.label`}
+                contentKeyHref={`nav.${item.key}.href`}
+                fallbackLabel={item.label}
+                fallbackHref={item.href}
+                className="text-brand-dark hover:text-brand-blue font-semibold transition-colors text-sm tracking-wide"
+              />
+            ))}
           </nav>
 
           <div className="hidden lg:flex items-center space-x-3">
@@ -64,21 +69,29 @@ const Header = () => {
                     
                     {/* Desktop Dropdown */}
                     <div className="hidden group-hover:block absolute right-0 mt-0 w-52 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
-                      <Link to="/admin" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-700 font-semibold">
-                        📋 Panel Principal
+                      <Link to="/admin-products" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-700 font-semibold">
+                        PRODUCTOS
                       </Link>
-                      <hr className="my-1" />
-                      <Link to="/admin-products" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-700">
-                        📦 Gestionar Productos
+                      <Link to="/admin-users" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-700 font-semibold">
+                        CLIENTES
                       </Link>
-                      <Link to="/admin-users" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-700">
-                        👥 Gestionar Usuarios
-                      </Link>
-                      <Link to="/admin-seed" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-700">
-                        🌱 Seeding de Datos
+                      <Link to="/admin-orders" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-700 font-semibold">
+                        PEDIDOS
                       </Link>
                     </div>
                   </div>
+                )}
+
+                {isAdmin && isDesktop && (
+                  <Button
+                    variant={isEditMode ? 'default' : 'outline'}
+                    size="sm"
+                    onClick={toggleEditMode}
+                    className={isEditMode ? 'bg-green-600 hover:bg-green-700 text-white' : 'text-brand-dark border-brand-dark'}
+                  >
+                    <Pencil className="h-4 w-4 mr-2" />
+                    {isEditMode ? 'Edicion activada' : 'Editar contenido'}
+                  </Button>
                 )}
 
                 <Button variant="ghost" size="icon" asChild className="text-brand-dark hover:text-brand-blue hover:bg-brand-base/20">
@@ -125,32 +138,28 @@ const Header = () => {
             className="lg:hidden border-t border-brand-base/30 bg-white shadow-lg"
           >
             <nav className="container mx-auto px-4 py-6 flex flex-col space-y-3">
-              <Link to="/" className="text-brand-dark hover:text-brand-blue font-semibold py-2 px-3 rounded-lg hover:bg-brand-base/20 transition-all" onClick={() => setMobileMenuOpen(false)}>
-                Inicio
-              </Link>
-              <Link to="/productos" className="text-brand-dark hover:text-brand-blue font-semibold py-2 px-3 rounded-lg hover:bg-brand-base/20 transition-all" onClick={() => setMobileMenuOpen(false)}>
-                Productos
-              </Link>
-              <Link to="/empresa" className="text-brand-dark hover:text-brand-blue font-semibold py-2 px-3 rounded-lg hover:bg-brand-base/20 transition-all" onClick={() => setMobileMenuOpen(false)}>
-                Empresa
-              </Link>
-              <Link to="/ventajas" className="text-brand-dark hover:text-brand-blue font-semibold py-2 px-3 rounded-lg hover:bg-brand-base/20 transition-all" onClick={() => setMobileMenuOpen(false)}>
-                Ventajas
-              </Link>
+              {navItems.map((item) => (
+                <EditableNavLink
+                  key={item.key}
+                  contentKeyLabel={`nav.${item.key}.label`}
+                  contentKeyHref={`nav.${item.key}.href`}
+                  fallbackLabel={item.label}
+                  fallbackHref={item.href}
+                  className="text-brand-dark hover:text-brand-blue font-semibold py-2 px-3 rounded-lg hover:bg-brand-base/20 transition-all"
+                  onNavigate={() => setMobileMenuOpen(false)}
+                />
+              ))}
               {isAdmin && (
                 <>
                   <div className="border-t border-gray-200 my-2"></div>
-                  <Link to="/admin" className="text-purple-700 hover:text-purple-900 font-semibold py-2 px-3 rounded-lg hover:bg-purple-100 transition-all flex items-center" onClick={() => setMobileMenuOpen(false)}>
-                    📋 Panel Principal Admin
+                  <Link to="/admin-products" className="text-purple-700 hover:text-purple-900 font-semibold py-2 px-3 rounded-lg hover:bg-purple-100 transition-all" onClick={() => setMobileMenuOpen(false)}>
+                    PRODUCTOS
                   </Link>
-                  <Link to="/admin-products" className="text-purple-700 hover:text-purple-900 font-semibold py-2 px-3 rounded-lg hover:bg-purple-100 transition-all flex items-center" onClick={() => setMobileMenuOpen(false)}>
-                    📦 Gestionar Productos
+                  <Link to="/admin-users" className="text-purple-700 hover:text-purple-900 font-semibold py-2 px-3 rounded-lg hover:bg-purple-100 transition-all" onClick={() => setMobileMenuOpen(false)}>
+                    CLIENTES
                   </Link>
-                  <Link to="/admin-users" className="text-purple-700 hover:text-purple-900 font-semibold py-2 px-3 rounded-lg hover:bg-purple-100 transition-all flex items-center" onClick={() => setMobileMenuOpen(false)}>
-                    👥 Gestionar Usuarios
-                  </Link>
-                  <Link to="/admin-seed" className="text-purple-700 hover:text-purple-900 font-semibold py-2 px-3 rounded-lg hover:bg-purple-100 transition-all flex items-center" onClick={() => setMobileMenuOpen(false)}>
-                    🌱 Seeding de Datos
+                  <Link to="/admin-orders" className="text-purple-700 hover:text-purple-900 font-semibold py-2 px-3 rounded-lg hover:bg-purple-100 transition-all" onClick={() => setMobileMenuOpen(false)}>
+                    PEDIDOS
                   </Link>
                 </>
               )}

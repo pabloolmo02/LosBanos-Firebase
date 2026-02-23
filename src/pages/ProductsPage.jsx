@@ -153,9 +153,25 @@ const ProductsPage = () => {
       <Helmet><title>Catálogo | Los Baños</title></Helmet>
 
       <div className="bg-slate-50 min-h-screen">
-        <div className="text-white py-12 bg-cover bg-center relative" style={{ backgroundImage: "url('/images/products-hero.jpg')" }}>
-          <div className="absolute inset-0 bg-black/50"></div>
-          <div className="container mx-auto px-4 relative z-10"><h1 className="text-4xl font-bold">Catálogo</h1></div>
+        <div
+          className="text-white py-16"
+          style={{
+            backgroundImage: "linear-gradient(rgba(27, 24, 71, 0.75), rgba(28, 37, 107, 0.75)), url('/images/products-hero.jpg')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }}
+        >
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="max-w-3xl"
+            >
+              <h1 className="text-4xl lg:text-5xl font-bold mb-4">Catálogo</h1>
+              <p className="text-xl text-blue-100">Explora todos los productos por categoría</p>
+            </motion.div>
+          </div>
         </div>
 
         <div className="container mx-auto px-4 py-8">

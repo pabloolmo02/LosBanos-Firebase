@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
 import { Button } from '@/components/ui/button';
-import { ShieldAlert, Package, Users, Database, LogOut } from 'lucide-react';
+import { ShieldAlert, Package, Users, ClipboardList, LogOut } from 'lucide-react';
 
 const AdminDashboardPage = () => {
   const { user, logout, loading } = useAuth();
@@ -36,7 +36,7 @@ const AdminDashboardPage = () => {
 
   const adminModules = [
     {
-      title: '📦 Gestionar Productos',
+      title: 'PRODUCTOS',
       description: 'Agregar, editar, eliminar productos. Gestionar imágenes, precios, categorías y detalles técnicos.',
       path: '/admin-products',
       color: 'bg-blue-50 border-blue-200 hover:bg-blue-100',
@@ -44,7 +44,7 @@ const AdminDashboardPage = () => {
       badge: 'Activo'
     },
     {
-      title: '👥 Gestionar Usuarios',
+      title: 'CLIENTES',
       description: 'Administrar usuarios, roles, permisos y acceso a la plataforma.',
       path: '/admin-users',
       color: 'bg-green-50 border-green-200 hover:bg-green-100',
@@ -52,11 +52,11 @@ const AdminDashboardPage = () => {
       badge: 'Activo'
     },
     {
-      title: '🌱 Seeding de Datos',
-      description: 'Cargar datos iniciales, migrar información y realizar operaciones en lote.',
-      path: '/admin-seed',
-      color: 'bg-purple-50 border-purple-200 hover:bg-purple-100',
-      icon: Database,
+      title: 'PEDIDOS',
+      description: 'Ver pedidos, actualizar estados y gestionar solicitudes de clientes.',
+      path: '/admin-orders',
+      color: 'bg-amber-50 border-amber-200 hover:bg-amber-100',
+      icon: ClipboardList,
       badge: 'Activo'
     }
   ];
