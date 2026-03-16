@@ -126,9 +126,20 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t mt-8 pt-8 text-sm text-center" style={{ borderColor: '#1b1847', color: '#1b1847' }}>
+        <div className="border-t mt-8 pt-8" style={{ borderColor: '#1b1847' }}>
+          <div className="flex justify-center mb-8">
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/losbanosdata-1f79f.firebasestorage.app/o/Banner%2FLogo-digitalizadores.png?alt=media&token=c36080b5-69ba-46e2-8cbb-a3f21a1707de"
+              alt="Kit Digital"
+              className="h-32 w-auto"
+            />
+          </div>
+        </div>
+
+        <div className="border-t text-sm text-center mt-12" style={{ borderColor: '#1b1847', color: '#1b1847' }}>
           <EditableText
             as="p"
+            className="pt-8"
             contentKey="footer.legal"
             fallback={`© ${new Date().getFullYear()} Comercial Los Baños - Distribución Autorizada. Todos los derechos reservados.`}
           />
